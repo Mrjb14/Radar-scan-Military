@@ -1,0 +1,3332 @@
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [WatchUi,5,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Graphics,6,13,21]; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [System,7,13,19]; ]
+using Toybox.System;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 8; @symbol_usingdef<0> = [Toybox,8,6,12]; @symbol_usingdef<1> = [Lang,8,13,17]; ]
+using Toybox.Lang;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 9; @symbol_usingdef<0> = [Toybox,9,6,12]; @symbol_usingdef<1> = [Time,9,13,17]; ]
+using Toybox.Time;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 10; @symbol_usingdef<0> = [Toybox,10,6,12]; @symbol_usingdef<1> = [Time,10,13,17]; @symbol_usingdef<2> = [Gregorian,10,18,27]; ]
+using Toybox.Time.Gregorian;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 11; @symbol_usingdef<0> = [Toybox,11,6,12]; @symbol_usingdef<1> = [Activity,11,13,21]; ]
+using Toybox.Activity;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 12; @symbol_usingdef<0> = [Toybox,12,6,12]; @symbol_usingdef<1> = [ActivityMonitor,12,13,28]; ]
+using Toybox.ActivityMonitor;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 13; @symbol_usingdef<0> = [Toybox,13,6,12]; @symbol_usingdef<1> = [Math,13,13,17]; ]
+using Toybox.Math;
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 15; @symbol_classdef = [NewWatch1View,15,6,19]; @symbol_extends<0> = [WatchUi,15,28,35]; @symbol_extends<1> = [WatchFace,15,36,45]; ]
+class NewWatch1View extends WatchUi.WatchFace {
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 15; ]
+    <init> {
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 49 16 ]
+        %tmp.1 = newa 0;
+        putv self :targets %tmp.1;
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 15; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 18; @position = 18; @symbol_constdef = [BG_COLOR,18,18,26]; ]
+    private
+    const BG_COLOR = 0x0A0F0A;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 19; @position = 18; @symbol_constdef = [RADAR_GREEN,19,18,29]; ]
+    private
+    const RADAR_GREEN = 0x00FF00;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 20; @position = 18; @symbol_constdef = [GLOW_COLOR,20,18,28]; ]
+    private
+    const GLOW_COLOR = 0x1A3A1A;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 21; @position = 18; @symbol_constdef = [TARGET_RED,21,18,28]; ]
+    private
+    const TARGET_RED = 0xFF0000;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 24; @position = 16; @symbol_vardef = [scanAngle,24,16,25]; ]
+    private
+    var scanAngle = 0;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 25; @position = 18; @symbol_constdef = [SCAN_INCREMENT,25,18,32]; ]
+    private
+    const SCAN_INCREMENT = 6;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 28; @position = 16; @symbol_vardef = [screenWidth,28,16,27]; ]
+    private
+    var screenWidth;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 29; @position = 16; @symbol_vardef = [screenHeight,29,16,28]; ]
+    private
+    var screenHeight;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 30; @position = 16; @symbol_vardef = [centerX,30,16,23]; ]
+    private
+    var centerX;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 31; @position = 16; @symbol_vardef = [centerY,31,16,23]; ]
+    private
+    var centerY;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 32; @position = 16; @symbol_vardef = [scale,32,16,21]; ]
+    private
+    var scale;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 35; @position = 16; @symbol_vardef = [hugeFont,35,16,24]; ]
+    private
+    var hugeFont;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 36; @position = 16; @symbol_vardef = [mediumFont,36,16,26]; ]
+    private
+    var mediumFont;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 37; @position = 16; @symbol_vardef = [smallFont,37,16,25]; ]
+    private
+    var smallFont;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 38; @position = 16; @symbol_vardef = [tinyFont,38,16,24]; ]
+    private
+    var tinyFont;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 41; @position = 16; @symbol_vardef = [orbitronTime,41,16,28]; ]
+    private
+    var orbitronTime;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 42; @position = 16; @symbol_vardef = [orbitronSmall,42,16,29]; ]
+    private
+    var orbitronSmall;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 45; @position = 16; @symbol_vardef = [needsFullRedraw,45,16,31]; ]
+    private
+    var needsFullRedraw = true;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 46; @position = 16; @symbol_vardef = [updateCounter,46,16,29]; ]
+    private
+    var updateCounter = 0;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 49; @position = 16; @symbol_vardef = [targets,49,16,23]; ]
+    private
+    var targets;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 50; @position = 18; @symbol_constdef = [MAX_TARGETS,50,18,29]; ]
+    private
+    const MAX_TARGETS = 3;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 51; @position = 18; @symbol_constdef = [TARGET_DURATION,51,18,33]; ]
+    private
+    const TARGET_DURATION = 5;
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 53; @symbol_functiondef = [initialize,53,13,23]; ]
+    function initialize() as Void {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_53_26_56_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 54 8 ]
+        symbol [ WatchFace %tmp.2 54 8 17 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 54 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 55 8 ]
+        %tmp.4 = 0;
+        symbol [ scanAngle ? 55 8 17 ];
+        putv self :scanAngle %tmp.4;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_53_26_56_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 58; @symbol_functiondef = [onLayout,58,13,21]; @symbol_param<0> = [dc,58,22,24]; ]
+    function onLayout(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_58_26_74_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 59 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 59 22 24 ];
+        symbol [ getWidth %tmp.2 59 25 33 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ screenWidth ? 59 8 19 ];
+        putv self :screenWidth %tmp.3;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 60 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 60 23 25 ];
+        symbol [ getHeight %tmp.5 60 26 35 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ screenHeight ? 60 8 20 ];
+        putv self :screenHeight %tmp.6;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 61 8 ]
+        symbol [ screenWidth %tmp.8 61 18 29 ];
+        %tmp.8 = getv ? :screenWidth;
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        symbol [ centerX ? 61 8 15 ];
+        putv self :centerX %tmp.10;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 62 8 ]
+        symbol [ screenHeight %tmp.12 62 18 30 ];
+        %tmp.12 = getv ? :screenHeight;
+        %tmp.13 = 2;
+        %tmp.14 = div %tmp.12 %tmp.13;
+        symbol [ centerY ? 62 8 15 ];
+        putv self :centerY %tmp.14;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 63 8 ]
+        symbol [ screenWidth %tmp.16 63 16 27 ];
+        %tmp.16 = getv ? :screenWidth;
+        %tmp.17 = 240.0;
+        %tmp.18 = div %tmp.16 %tmp.17;
+        symbol [ scale ? 63 8 13 ];
+        putv self :scale %tmp.18;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 66 8 ]
+        symbol [ Graphics %tmp.19 66 19 27 ];
+        %tmp.19 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.20 66 28 43 ];
+        %tmp.20 = getv %tmp.19 :FONT_NUMBER_HOT;
+        symbol [ hugeFont ? 66 8 16 ];
+        putv self :hugeFont %tmp.20;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 67 8 ]
+        symbol [ Graphics %tmp.21 67 21 29 ];
+        %tmp.21 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.22 67 30 41 ];
+        %tmp.22 = getv %tmp.21 :FONT_MEDIUM;
+        symbol [ mediumFont ? 67 8 18 ];
+        putv self :mediumFont %tmp.22;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 68 8 ]
+        symbol [ Graphics %tmp.23 68 20 28 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.24 68 29 39 ];
+        %tmp.24 = getv %tmp.23 :FONT_SMALL;
+        symbol [ smallFont ? 68 8 17 ];
+        putv self :smallFont %tmp.24;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 69 8 ]
+        symbol [ Graphics %tmp.25 69 19 27 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.26 69 28 38 ];
+        %tmp.26 = getv %tmp.25 :FONT_XTINY;
+        symbol [ tinyFont ? 69 8 16 ];
+        putv self :tinyFont %tmp.26;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 72 8 ]
+        symbol [ WatchUi %tmp.27 72 23 30 ];
+        %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.28 72 31 43 ];
+        %tmp.28 = getv function %tmp.27 :loadResource;
+        symbol [ Rez %tmp.30 72 44 47 ];
+        %tmp.30 = getv ? :Rez;
+        symbol [ Fonts %tmp.31 72 48 53 ];
+        %tmp.31 = getv %tmp.30 :Fonts;
+        symbol [ OrbitronTime %tmp.32 72 54 66 ];
+        %tmp.32 = getv %tmp.31 :OrbitronTime;
+        %tmp.33 = invoke %tmp.27 %tmp.28(%tmp.32);
+        symbol [ orbitronTime ? 72 8 20 ];
+        putv self :orbitronTime %tmp.33;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 73 8 ]
+        symbol [ WatchUi %tmp.34 73 24 31 ];
+        %tmp.34 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.35 73 32 44 ];
+        %tmp.35 = getv function %tmp.34 :loadResource;
+        symbol [ Rez %tmp.37 73 45 48 ];
+        %tmp.37 = getv ? :Rez;
+        symbol [ Fonts %tmp.38 73 49 54 ];
+        %tmp.38 = getv %tmp.37 :Fonts;
+        symbol [ OrbitronSmall %tmp.39 73 55 68 ];
+        %tmp.39 = getv %tmp.38 :OrbitronSmall;
+        %tmp.40 = invoke %tmp.34 %tmp.35(%tmp.39);
+        symbol [ orbitronSmall ? 73 8 21 ];
+        putv self :orbitronSmall %tmp.40;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_58_26_74_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 76; @symbol_functiondef = [onShow,76,13,19]; ]
+    function onShow() {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_76_22_78_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 77 8 ]
+        %tmp.1 = true;
+        symbol [ needsFullRedraw ? 77 8 23 ];
+        putv self :needsFullRedraw %tmp.1;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_76_22_78_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 80; @symbol_functiondef = [onUpdate,80,13,21]; @symbol_param<0> = [dc,80,22,24]; ]
+    function onUpdate(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_80_26_103_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 81 8 ]
+        symbol [ updateCounter %tmp.3 81 8 21 ];
+        %tmp.3 = getv ? :updateCounter;
+        %tmp.4 = add %tmp.3 1;
+        symbol [ updateCounter ? 81 8 21 ];
+        putv self :updateCounter dup %tmp.4;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 84 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_80_26_103_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_80_26_103_4_stop" ]
+        %clockTime.1 = local;
+        symbol [ clockTime %clockTime.1 84 12 21 ];
+        symbol [ System %tmp.5 84 24 30 ];
+        %tmp.5 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.6 84 31 43 ];
+        %tmp.6 = getv function %tmp.5 :getClockTime;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %clockTime.1 %tmp.7;
+        symbol [ clockTime %clockTime.1 84 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 85 8 ]
+        %tmp.8 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.8 85 20 29 ];
+        symbol [ sec %tmp.9 85 30 33 ];
+        %tmp.9 = getv %tmp.8 :sec;
+        %tmp.10 = 6;
+        %tmp.11 = mul %tmp.9 %tmp.10;
+        symbol [ scanAngle ? 85 8 17 ];
+        putv self :scanAngle %tmp.11;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 87 8 ]
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_8_92_8_if_stmt:
+        symbol [ needsFullRedraw %tmp.13 87 12 27 ];
+        %tmp.13 = getv ? :needsFullRedraw;
+        bf %tmp.13 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_8_92_8_if_else_false;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_8_92_8_if_true:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_29_90_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 88 12 ]
+        %tmp.14 = self;
+        symbol [ drawStaticElements %tmp.15 88 12 30 ];
+        %tmp.15 = getv function %tmp.14 :drawStaticElements;
+        %tmp.16 = lgetv %dc;
+        symbol [ dc %tmp.16 88 31 33 ];
+        invoke %tmp.14 %tmp.15(%tmp.16);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 89 12 ]
+        %tmp.17 = false;
+        symbol [ needsFullRedraw ? 89 12 27 ];
+        putv self :needsFullRedraw %tmp.17;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_29_90_8_stop:
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_8_92_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_8_92_8_if_else_false:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_90_15_92_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 91 12 ]
+        %tmp.18 = self;
+        symbol [ clearDynamicAreas %tmp.19 91 12 29 ];
+        %tmp.19 = getv function %tmp.18 :clearDynamicAreas;
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 91 30 32 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_90_15_92_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_87_8_92_8_if_end:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 95 8 ]
+        %tmp.21 = self;
+        symbol [ drawScanLine %tmp.22 95 8 20 ];
+        %tmp.22 = getv function %tmp.21 :drawScanLine;
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 95 21 23 ];
+        invoke %tmp.21 %tmp.22(%tmp.23);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 96 8 ]
+        %tmp.24 = self;
+        symbol [ drawScanTrail %tmp.25 96 8 21 ];
+        %tmp.25 = getv function %tmp.24 :drawScanTrail;
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 96 22 24 ];
+        invoke %tmp.24 %tmp.25(%tmp.26);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 97 8 ]
+        %tmp.27 = self;
+        symbol [ updateTargets %tmp.28 97 8 21 ];
+        %tmp.28 = getv function %tmp.27 :updateTargets;
+        %tmp.29 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.29 97 22 31 ];
+        symbol [ sec %tmp.30 97 32 35 ];
+        %tmp.30 = getv %tmp.29 :sec;
+        invoke %tmp.27 %tmp.28(%tmp.30);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 98 8 ]
+        %tmp.31 = self;
+        symbol [ drawTargets %tmp.32 98 8 19 ];
+        %tmp.32 = getv function %tmp.31 :drawTargets;
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 98 20 22 ];
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 99 8 ]
+        %tmp.34 = self;
+        symbol [ drawTime %tmp.35 99 8 16 ];
+        %tmp.35 = getv function %tmp.34 :drawTime;
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 99 17 19 ];
+        invoke %tmp.34 %tmp.35(%tmp.36);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 100 8 ]
+        %tmp.37 = self;
+        symbol [ drawDate %tmp.38 100 8 16 ];
+        %tmp.38 = getv function %tmp.37 :drawDate;
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 100 17 19 ];
+        invoke %tmp.37 %tmp.38(%tmp.39);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 101 8 ]
+        %tmp.40 = self;
+        symbol [ drawAllBlips %tmp.41 101 8 20 ];
+        %tmp.41 = getv function %tmp.40 :drawAllBlips;
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 101 21 23 ];
+        invoke %tmp.40 %tmp.41(%tmp.42);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 102 8 ]
+        %tmp.43 = self;
+        symbol [ drawStatusIndicators %tmp.44 102 8 28 ];
+        %tmp.44 = getv function %tmp.43 :drawStatusIndicators;
+        %tmp.45 = lgetv %dc;
+        symbol [ dc %tmp.45 102 29 31 ];
+        invoke %tmp.43 %tmp.44(%tmp.45);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_80_26_103_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 106; @symbol_functiondef = [drawStaticElements,106,13,31]; @symbol_param<0> = [dc,106,32,34]; ]
+    function drawStaticElements(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_106_36_139_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 107 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 107 8 10 ];
+        symbol [ setAntiAlias %tmp.2 107 11 23 ];
+        %tmp.2 = getv function %tmp.1 :setAntiAlias;
+        %tmp.3 = true;
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 110 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 110 8 10 ];
+        symbol [ setColor %tmp.5 110 11 19 ];
+        %tmp.5 = getv function %tmp.4 :setColor;
+        symbol [ BG_COLOR %tmp.7 110 20 28 ];
+        %tmp.7 = getv ? :BG_COLOR;
+        symbol [ BG_COLOR %tmp.9 110 30 38 ];
+        %tmp.9 = getv ? :BG_COLOR;
+        invoke %tmp.4 %tmp.5(%tmp.7, %tmp.9);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 111 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 111 8 10 ];
+        symbol [ fillCircle %tmp.11 111 11 21 ];
+        %tmp.11 = getv function %tmp.10 :fillCircle;
+        symbol [ centerX %tmp.13 111 22 29 ];
+        %tmp.13 = getv ? :centerX;
+        symbol [ centerY %tmp.15 111 31 38 ];
+        %tmp.15 = getv ? :centerY;
+        symbol [ centerX %tmp.17 111 40 47 ];
+        %tmp.17 = getv ? :centerX;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15, %tmp.17);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 114 8 ]
+        %tmp.18 = self;
+        symbol [ drawCentralGlow %tmp.19 114 8 23 ];
+        %tmp.19 = getv function %tmp.18 :drawCentralGlow;
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 114 24 26 ];
+        invoke %tmp.18 %tmp.19(%tmp.20);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 117 8 ]
+        %tmp.21 = self;
+        symbol [ drawGrid %tmp.22 117 8 16 ];
+        %tmp.22 = getv function %tmp.21 :drawGrid;
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 117 17 19 ];
+        invoke %tmp.21 %tmp.22(%tmp.23);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 120 8 ]
+        %tmp.24 = self;
+        symbol [ drawConcentricCircles %tmp.25 120 8 29 ];
+        %tmp.25 = getv function %tmp.24 :drawConcentricCircles;
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 120 30 32 ];
+        invoke %tmp.24 %tmp.25(%tmp.26);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 123 8 ]
+        %tmp.27 = self;
+        symbol [ drawCentralCross %tmp.28 123 8 24 ];
+        %tmp.28 = getv function %tmp.27 :drawCentralCross;
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 123 25 27 ];
+        invoke %tmp.27 %tmp.28(%tmp.29);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 126 8 ]
+        %tmp.30 = self;
+        symbol [ drawDegreeMarkers %tmp.31 126 8 25 ];
+        %tmp.31 = getv function %tmp.30 :drawDegreeMarkers;
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 126 26 28 ];
+        invoke %tmp.30 %tmp.31(%tmp.32);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 129 8 ]
+        %tmp.33 = self;
+        symbol [ drawInterfaceCorners %tmp.34 129 8 28 ];
+        %tmp.34 = getv function %tmp.33 :drawInterfaceCorners;
+        %tmp.35 = lgetv %dc;
+        symbol [ dc %tmp.35 129 29 31 ];
+        invoke %tmp.33 %tmp.34(%tmp.35);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 132 8 ]
+        %tmp.36 = self;
+        symbol [ drawCenterDot %tmp.37 132 8 21 ];
+        %tmp.37 = getv function %tmp.36 :drawCenterDot;
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 132 22 24 ];
+        invoke %tmp.36 %tmp.37(%tmp.38);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 135 8 ]
+        %tmp.39 = self;
+        symbol [ drawStaticLabels %tmp.40 135 8 24 ];
+        %tmp.40 = getv function %tmp.39 :drawStaticLabels;
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 135 25 27 ];
+        invoke %tmp.39 %tmp.40(%tmp.41);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 138 8 ]
+        %tmp.42 = self;
+        symbol [ drawDistanceScale %tmp.43 138 8 25 ];
+        %tmp.43 = getv function %tmp.42 :drawDistanceScale;
+        %tmp.44 = lgetv %dc;
+        symbol [ dc %tmp.44 138 26 28 ];
+        invoke %tmp.42 %tmp.43(%tmp.44);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_106_36_139_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 142; @symbol_functiondef = [drawCentralGlow,142,13,28]; @symbol_param<0> = [dc,142,29,31]; ]
+    function drawCentralGlow(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_142_33_154_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 143 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_142_33_154_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_142_33_154_4_stop" ]
+        %glowSteps.1 = local;
+        symbol [ glowSteps %glowSteps.1 143 12 21 ];
+        %tmp.1 = newa 4;
+        %tmp.2 = newa 2;
+        %tmp.3 = 100;
+        %tmp.4 = dup %tmp.2;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        %tmp.6 = 0.8;
+        %tmp.7 = dup %tmp.5;
+        %tmp.8 = aputv %tmp.7 1 %tmp.6;
+        %tmp.9 = dup %tmp.1;
+        %tmp.10 = aputv %tmp.9 0 %tmp.8;
+        %tmp.11 = newa 2;
+        %tmp.12 = 80;
+        %tmp.13 = dup %tmp.11;
+        %tmp.14 = aputv %tmp.13 0 %tmp.12;
+        %tmp.15 = 0.6;
+        %tmp.16 = dup %tmp.14;
+        %tmp.17 = aputv %tmp.16 1 %tmp.15;
+        %tmp.18 = dup %tmp.10;
+        %tmp.19 = aputv %tmp.18 1 %tmp.17;
+        %tmp.20 = newa 2;
+        %tmp.21 = 60;
+        %tmp.22 = dup %tmp.20;
+        %tmp.23 = aputv %tmp.22 0 %tmp.21;
+        %tmp.24 = 0.4;
+        %tmp.25 = dup %tmp.23;
+        %tmp.26 = aputv %tmp.25 1 %tmp.24;
+        %tmp.27 = dup %tmp.19;
+        %tmp.28 = aputv %tmp.27 2 %tmp.26;
+        %tmp.29 = newa 2;
+        %tmp.30 = 40;
+        %tmp.31 = dup %tmp.29;
+        %tmp.32 = aputv %tmp.31 0 %tmp.30;
+        %tmp.33 = 0.2;
+        %tmp.34 = dup %tmp.32;
+        %tmp.35 = aputv %tmp.34 1 %tmp.33;
+        %tmp.36 = dup %tmp.28;
+        %tmp.37 = aputv %tmp.36 3 %tmp.35;
+        lputv %glowSteps.1 %tmp.37;
+        symbol [ glowSteps %glowSteps.1 143 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 150 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 150 17 18 ];
+        %tmp.38 = 0;
+        lputv %i.2 %tmp.38;
+        symbol [ i %i.2 150 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_test:
+        %tmp.39 = lgetv %i.2;
+        symbol [ i %tmp.39 150 24 25 ];
+        %tmp.40 = lgetv %glowSteps.1;
+        symbol [ glowSteps %tmp.40 150 28 37 ];
+        symbol [ size %tmp.41 150 38 42 ];
+        %tmp.41 = getv function %tmp.40 :size;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = lt %tmp.39 %tmp.42;
+        bf %tmp.43 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_51_153_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 151 12 ]
+        %tmp.44 = lgetv %dc;
+        symbol [ dc %tmp.44 151 12 14 ];
+        symbol [ setColor %tmp.45 151 15 23 ];
+        %tmp.45 = getv function %tmp.44 :setColor;
+        symbol [ GLOW_COLOR %tmp.47 151 24 34 ];
+        %tmp.47 = getv ? :GLOW_COLOR;
+        symbol [ Graphics %tmp.48 151 36 44 ];
+        %tmp.48 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.49 151 45 62 ];
+        %tmp.49 = getv %tmp.48 :COLOR_TRANSPARENT;
+        invoke %tmp.44 %tmp.45(%tmp.47, %tmp.49);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 152 12 ]
+        %tmp.50 = lgetv %dc;
+        symbol [ dc %tmp.50 152 12 14 ];
+        symbol [ fillCircle %tmp.51 152 15 25 ];
+        %tmp.51 = getv function %tmp.50 :fillCircle;
+        symbol [ centerX %tmp.53 152 26 33 ];
+        %tmp.53 = getv ? :centerX;
+        symbol [ centerY %tmp.55 152 35 42 ];
+        %tmp.55 = getv ? :centerY;
+        %tmp.56 = lgetv %glowSteps.1;
+        symbol [ glowSteps %tmp.56 152 45 54 ];
+        %tmp.57 = lgetv %i.2;
+        symbol [ i %tmp.57 152 55 56 ];
+        %tmp.58 = agetv %tmp.56 %tmp.57;
+        %tmp.59 = 0;
+        %tmp.60 = agetv %tmp.58 %tmp.59;
+        symbol [ scale %tmp.62 152 63 68 ];
+        %tmp.62 = getv ? :scale;
+        %tmp.63 = mul %tmp.60 %tmp.62;
+        symbol [ toNumber %tmp.64 152 70 78 ];
+        %tmp.64 = getv function %tmp.63 :toNumber;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        invoke %tmp.50 %tmp.51(%tmp.53, %tmp.55, %tmp.65);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_51_153_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 150 ]
+        %tmp.68 = lgetv %i.2;
+        symbol [ i %tmp.68 150 46 47 ];
+        %tmp.69 = add %tmp.68 1;
+        lputv %i.2 %tmp.69;
+        symbol [ i %i.2 150 46 47 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_150_8_153_8_for_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_142_33_154_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 157; @symbol_functiondef = [drawGrid,157,13,21]; @symbol_param<0> = [dc,157,22,24]; ]
+    function drawGrid(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_157_26_172_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 158 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 158 8 10 ];
+        symbol [ setColor %tmp.2 158 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ GLOW_COLOR %tmp.4 158 20 30 ];
+        %tmp.4 = getv ? :GLOW_COLOR;
+        symbol [ Graphics %tmp.5 158 32 40 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 158 41 58 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 159 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 159 8 10 ];
+        symbol [ setPenWidth %tmp.8 159 11 22 ];
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 1;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 161 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_157_26_172_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_157_26_172_4_stop" ]
+        %gridSize.1 = local;
+        symbol [ gridSize %gridSize.1 161 12 20 ];
+        %tmp.10 = 20;
+        symbol [ scale %tmp.12 161 29 34 ];
+        %tmp.12 = getv ? :scale;
+        %tmp.13 = mul %tmp.10 %tmp.12;
+        symbol [ toNumber %tmp.14 161 36 44 ];
+        %tmp.14 = getv function %tmp.13 :toNumber;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %gridSize.1 %tmp.15;
+        symbol [ gridSize %gridSize.1 161 12 20 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 164 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_end" ]
+        %x.2 = local;
+        symbol [ x %x.2 164 17 18 ];
+        symbol [ centerX %tmp.17 164 21 28 ];
+        %tmp.17 = getv ? :centerX;
+        %tmp.18 = lgetv %gridSize.1;
+        symbol [ gridSize %tmp.18 164 31 39 ];
+        %tmp.19 = mod %tmp.17 %tmp.18;
+        lputv %x.2 %tmp.19;
+        symbol [ x %x.2 164 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_test:
+        %tmp.20 = lgetv %x.2;
+        symbol [ x %tmp.20 164 41 42 ];
+        symbol [ screenWidth %tmp.22 164 45 56 ];
+        %tmp.22 = getv ? :screenWidth;
+        %tmp.23 = lt %tmp.20 %tmp.22;
+        bf %tmp.23 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_73_166_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 165 12 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 165 12 14 ];
+        symbol [ drawLine %tmp.25 165 15 23 ];
+        %tmp.25 = getv function %tmp.24 :drawLine;
+        %tmp.26 = lgetv %x.2;
+        symbol [ x %tmp.26 165 24 25 ];
+        symbol [ toNumber %tmp.27 165 26 34 ];
+        %tmp.27 = getv function %tmp.26 :toNumber;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = 0;
+        %tmp.30 = lgetv %x.2;
+        symbol [ x %tmp.30 165 41 42 ];
+        symbol [ toNumber %tmp.31 165 43 51 ];
+        %tmp.31 = getv function %tmp.30 :toNumber;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        symbol [ screenHeight %tmp.34 165 55 67 ];
+        %tmp.34 = getv ? :screenHeight;
+        invoke %tmp.24 %tmp.25(%tmp.28, %tmp.29, %tmp.32, %tmp.34);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_73_166_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 164 ]
+        %tmp.35 = lgetv %x.2;
+        symbol [ x %tmp.35 164 58 59 ];
+        %tmp.36 = lgetv %gridSize.1;
+        symbol [ gridSize %tmp.36 164 63 71 ];
+        %tmp.37 = add %tmp.35 %tmp.36;
+        lputv %x.2 %tmp.37;
+        symbol [ x %x.2 164 58 59 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_164_8_166_8_for_end:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 169 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_end" ]
+        %y.3 = local;
+        symbol [ y %y.3 169 17 18 ];
+        symbol [ centerY %tmp.39 169 21 28 ];
+        %tmp.39 = getv ? :centerY;
+        %tmp.40 = lgetv %gridSize.1;
+        symbol [ gridSize %tmp.40 169 31 39 ];
+        %tmp.41 = mod %tmp.39 %tmp.40;
+        lputv %y.3 %tmp.41;
+        symbol [ y %y.3 169 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_test:
+        %tmp.42 = lgetv %y.3;
+        symbol [ y %tmp.42 169 41 42 ];
+        symbol [ screenHeight %tmp.44 169 45 57 ];
+        %tmp.44 = getv ? :screenHeight;
+        %tmp.45 = lt %tmp.42 %tmp.44;
+        bf %tmp.45 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_74_171_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 170 12 ]
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 170 12 14 ];
+        symbol [ drawLine %tmp.47 170 15 23 ];
+        %tmp.47 = getv function %tmp.46 :drawLine;
+        %tmp.48 = 0;
+        %tmp.49 = lgetv %y.3;
+        symbol [ y %tmp.49 170 27 28 ];
+        symbol [ toNumber %tmp.50 170 29 37 ];
+        %tmp.50 = getv function %tmp.49 :toNumber;
+        %tmp.51 = invoke %tmp.49 %tmp.50();
+        symbol [ screenWidth %tmp.53 170 41 52 ];
+        %tmp.53 = getv ? :screenWidth;
+        %tmp.54 = lgetv %y.3;
+        symbol [ y %tmp.54 170 54 55 ];
+        symbol [ toNumber %tmp.55 170 56 64 ];
+        %tmp.55 = getv function %tmp.54 :toNumber;
+        %tmp.56 = invoke %tmp.54 %tmp.55();
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.51, %tmp.53, %tmp.56);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_74_171_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 169 ]
+        %tmp.57 = lgetv %y.3;
+        symbol [ y %tmp.57 169 59 60 ];
+        %tmp.58 = lgetv %gridSize.1;
+        symbol [ gridSize %tmp.58 169 64 72 ];
+        %tmp.59 = add %tmp.57 %tmp.58;
+        lputv %y.3 %tmp.59;
+        symbol [ y %y.3 169 59 60 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_169_8_171_8_for_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_157_26_172_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 175; @symbol_functiondef = [drawConcentricCircles,175,13,34]; @symbol_param<0> = [dc,175,35,37]; ]
+    function drawConcentricCircles(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_175_39_183_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 176 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 176 8 10 ];
+        symbol [ setColor %tmp.2 176 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 176 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 176 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 176 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 177 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 177 8 10 ];
+        symbol [ setPenWidth %tmp.8 177 11 22 ];
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 1;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 179 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_175_39_183_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_175_39_183_4_stop" ]
+        %radii.1 = local;
+        symbol [ radii %radii.1 179 12 17 ];
+        %tmp.10 = newa 4;
+        %tmp.11 = 110;
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 0 %tmp.11;
+        %tmp.14 = 90;
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 1 %tmp.14;
+        %tmp.17 = 70;
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 2 %tmp.17;
+        %tmp.20 = 50;
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 3 %tmp.20;
+        lputv %radii.1 %tmp.22;
+        symbol [ radii %radii.1 179 12 17 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 180 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 180 17 18 ];
+        %tmp.23 = 0;
+        lputv %i.2 %tmp.23;
+        symbol [ i %i.2 180 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_test:
+        %tmp.24 = lgetv %i.2;
+        symbol [ i %tmp.24 180 24 25 ];
+        %tmp.25 = lgetv %radii.1;
+        symbol [ radii %tmp.25 180 28 33 ];
+        symbol [ size %tmp.26 180 34 38 ];
+        %tmp.26 = getv function %tmp.25 :size;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = lt %tmp.24 %tmp.27;
+        bf %tmp.28 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_47_182_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 181 12 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 181 12 14 ];
+        symbol [ drawCircle %tmp.30 181 15 25 ];
+        %tmp.30 = getv function %tmp.29 :drawCircle;
+        symbol [ centerX %tmp.32 181 26 33 ];
+        %tmp.32 = getv ? :centerX;
+        symbol [ centerY %tmp.34 181 35 42 ];
+        %tmp.34 = getv ? :centerY;
+        %tmp.35 = lgetv %radii.1;
+        symbol [ radii %tmp.35 181 45 50 ];
+        %tmp.36 = lgetv %i.2;
+        symbol [ i %tmp.36 181 51 52 ];
+        %tmp.37 = agetv %tmp.35 %tmp.36;
+        symbol [ scale %tmp.39 181 56 61 ];
+        %tmp.39 = getv ? :scale;
+        %tmp.40 = mul %tmp.37 %tmp.39;
+        symbol [ toNumber %tmp.41 181 63 71 ];
+        %tmp.41 = getv function %tmp.40 :toNumber;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        invoke %tmp.29 %tmp.30(%tmp.32, %tmp.34, %tmp.42);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_47_182_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 180 ]
+        %tmp.45 = lgetv %i.2;
+        symbol [ i %tmp.45 180 42 43 ];
+        %tmp.46 = add %tmp.45 1;
+        lputv %i.2 %tmp.46;
+        symbol [ i %i.2 180 42 43 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_180_8_182_8_for_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_175_39_183_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 186; @symbol_functiondef = [drawCentralCross,186,13,29]; @symbol_param<0> = [dc,186,30,32]; ]
+    function drawCentralCross(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_186_34_194_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 187 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 187 8 10 ];
+        symbol [ setColor %tmp.2 187 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 187 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 187 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 187 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 188 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 188 8 10 ];
+        symbol [ setPenWidth %tmp.8 188 11 22 ];
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 1;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 191 8 ]
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 191 8 10 ];
+        symbol [ drawLine %tmp.11 191 11 19 ];
+        %tmp.11 = getv function %tmp.10 :drawLine;
+        symbol [ centerX %tmp.13 191 20 27 ];
+        %tmp.13 = getv ? :centerX;
+        %tmp.14 = 10;
+        symbol [ scale %tmp.16 191 35 40 ];
+        %tmp.16 = getv ? :scale;
+        %tmp.17 = mul %tmp.14 %tmp.16;
+        symbol [ toNumber %tmp.18 191 42 50 ];
+        %tmp.18 = getv function %tmp.17 :toNumber;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        symbol [ centerX %tmp.21 191 54 61 ];
+        %tmp.21 = getv ? :centerX;
+        %tmp.22 = 230;
+        symbol [ scale %tmp.24 191 70 75 ];
+        %tmp.24 = getv ? :scale;
+        %tmp.25 = mul %tmp.22 %tmp.24;
+        symbol [ toNumber %tmp.26 191 77 85 ];
+        %tmp.26 = getv function %tmp.25 :toNumber;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.19, %tmp.21, %tmp.27);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 193 8 ]
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 193 8 10 ];
+        symbol [ drawLine %tmp.29 193 11 19 ];
+        %tmp.29 = getv function %tmp.28 :drawLine;
+        %tmp.30 = 10;
+        symbol [ scale %tmp.32 193 26 31 ];
+        %tmp.32 = getv ? :scale;
+        %tmp.33 = mul %tmp.30 %tmp.32;
+        symbol [ toNumber %tmp.34 193 33 41 ];
+        %tmp.34 = getv function %tmp.33 :toNumber;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        symbol [ centerY %tmp.37 193 45 52 ];
+        %tmp.37 = getv ? :centerY;
+        %tmp.38 = 230;
+        symbol [ scale %tmp.40 193 61 66 ];
+        %tmp.40 = getv ? :scale;
+        %tmp.41 = mul %tmp.38 %tmp.40;
+        symbol [ toNumber %tmp.42 193 68 76 ];
+        %tmp.42 = getv function %tmp.41 :toNumber;
+        %tmp.43 = invoke %tmp.41 %tmp.42();
+        symbol [ centerY %tmp.45 193 80 87 ];
+        %tmp.45 = getv ? :centerY;
+        invoke %tmp.28 %tmp.29(%tmp.35, %tmp.37, %tmp.43, %tmp.45);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_186_34_194_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 197; @symbol_functiondef = [drawDegreeMarkers,197,13,30]; @symbol_param<0> = [dc,197,31,33]; ]
+    function drawDegreeMarkers(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_197_35_211_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 198 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 198 8 10 ];
+        symbol [ setColor %tmp.2 198 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 198 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 198 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 198 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 200 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_197_35_211_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_197_35_211_4_stop" ]
+        %markers.1 = local;
+        symbol [ markers %markers.1 200 12 19 ];
+        %tmp.7 = newa 4;
+        %tmp.8 = newa 3;
+        symbol [ centerX %tmp.10 201 13 20 ];
+        %tmp.10 = getv ? :centerX;
+        %tmp.11 = dup %tmp.8;
+        %tmp.12 = aputv %tmp.11 0 %tmp.10;
+        %tmp.13 = 18;
+        symbol [ scale %tmp.15 201 28 33 ];
+        %tmp.15 = getv ? :scale;
+        %tmp.16 = mul %tmp.13 %tmp.15;
+        symbol [ toNumber %tmp.17 201 35 43 ];
+        %tmp.17 = getv function %tmp.16 :toNumber;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        %tmp.19 = dup %tmp.12;
+        %tmp.20 = aputv %tmp.19 1 %tmp.18;
+        %tmp.21 = "000";
+        %tmp.22 = dup %tmp.20;
+        %tmp.23 = aputv %tmp.22 2 %tmp.21;
+        %tmp.24 = dup %tmp.7;
+        %tmp.25 = aputv %tmp.24 0 %tmp.23;
+        %tmp.26 = newa 3;
+        %tmp.27 = 225;
+        symbol [ scale %tmp.29 202 20 25 ];
+        %tmp.29 = getv ? :scale;
+        %tmp.30 = mul %tmp.27 %tmp.29;
+        symbol [ toNumber %tmp.31 202 27 35 ];
+        %tmp.31 = getv function %tmp.30 :toNumber;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        %tmp.33 = dup %tmp.26;
+        %tmp.34 = aputv %tmp.33 0 %tmp.32;
+        symbol [ centerY %tmp.36 202 40 47 ];
+        %tmp.36 = getv ? :centerY;
+        %tmp.37 = 4;
+        symbol [ scale %tmp.39 202 52 57 ];
+        %tmp.39 = getv ? :scale;
+        %tmp.40 = mul %tmp.37 %tmp.39;
+        %tmp.41 = add %tmp.36 %tmp.40;
+        symbol [ toNumber %tmp.42 202 59 67 ];
+        %tmp.42 = getv function %tmp.41 :toNumber;
+        %tmp.43 = invoke %tmp.41 %tmp.42();
+        %tmp.44 = dup %tmp.34;
+        %tmp.45 = aputv %tmp.44 1 %tmp.43;
+        %tmp.46 = "090";
+        %tmp.47 = dup %tmp.45;
+        %tmp.48 = aputv %tmp.47 2 %tmp.46;
+        %tmp.49 = dup %tmp.25;
+        %tmp.50 = aputv %tmp.49 1 %tmp.48;
+        %tmp.51 = newa 3;
+        symbol [ centerX %tmp.53 203 13 20 ];
+        %tmp.53 = getv ? :centerX;
+        %tmp.54 = dup %tmp.51;
+        %tmp.55 = aputv %tmp.54 0 %tmp.53;
+        %tmp.56 = 232;
+        symbol [ scale %tmp.58 203 29 34 ];
+        %tmp.58 = getv ? :scale;
+        %tmp.59 = mul %tmp.56 %tmp.58;
+        symbol [ toNumber %tmp.60 203 36 44 ];
+        %tmp.60 = getv function %tmp.59 :toNumber;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        %tmp.62 = dup %tmp.55;
+        %tmp.63 = aputv %tmp.62 1 %tmp.61;
+        %tmp.64 = "180";
+        %tmp.65 = dup %tmp.63;
+        %tmp.66 = aputv %tmp.65 2 %tmp.64;
+        %tmp.67 = dup %tmp.50;
+        %tmp.68 = aputv %tmp.67 2 %tmp.66;
+        %tmp.69 = newa 3;
+        %tmp.70 = 15;
+        symbol [ scale %tmp.72 204 19 24 ];
+        %tmp.72 = getv ? :scale;
+        %tmp.73 = mul %tmp.70 %tmp.72;
+        symbol [ toNumber %tmp.74 204 26 34 ];
+        %tmp.74 = getv function %tmp.73 :toNumber;
+        %tmp.75 = invoke %tmp.73 %tmp.74();
+        %tmp.76 = dup %tmp.69;
+        %tmp.77 = aputv %tmp.76 0 %tmp.75;
+        symbol [ centerY %tmp.79 204 39 46 ];
+        %tmp.79 = getv ? :centerY;
+        %tmp.80 = 4;
+        symbol [ scale %tmp.82 204 51 56 ];
+        %tmp.82 = getv ? :scale;
+        %tmp.83 = mul %tmp.80 %tmp.82;
+        %tmp.84 = add %tmp.79 %tmp.83;
+        symbol [ toNumber %tmp.85 204 58 66 ];
+        %tmp.85 = getv function %tmp.84 :toNumber;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        %tmp.87 = dup %tmp.77;
+        %tmp.88 = aputv %tmp.87 1 %tmp.86;
+        %tmp.89 = "270";
+        %tmp.90 = dup %tmp.88;
+        %tmp.91 = aputv %tmp.90 2 %tmp.89;
+        %tmp.92 = dup %tmp.68;
+        %tmp.93 = aputv %tmp.92 3 %tmp.91;
+        lputv %markers.1 %tmp.93;
+        symbol [ markers %markers.1 200 12 19 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 207 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 207 17 18 ];
+        %tmp.94 = 0;
+        lputv %i.2 %tmp.94;
+        symbol [ i %i.2 207 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_test:
+        %tmp.95 = lgetv %i.2;
+        symbol [ i %tmp.95 207 24 25 ];
+        %tmp.96 = lgetv %markers.1;
+        symbol [ markers %tmp.96 207 28 35 ];
+        symbol [ size %tmp.97 207 36 40 ];
+        %tmp.97 = getv function %tmp.96 :size;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        %tmp.99 = lt %tmp.95 %tmp.98;
+        bf %tmp.99 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_49_210_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 208 12 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 208 12 14 ];
+        symbol [ drawText %tmp.101 208 15 23 ];
+        %tmp.101 = getv function %tmp.100 :drawText;
+        %tmp.102 = lgetv %markers.1;
+        symbol [ markers %tmp.102 208 24 31 ];
+        %tmp.103 = lgetv %i.2;
+        symbol [ i %tmp.103 208 32 33 ];
+        %tmp.104 = agetv %tmp.102 %tmp.103;
+        %tmp.105 = 0;
+        %tmp.106 = agetv %tmp.104 %tmp.105;
+        %tmp.107 = lgetv %markers.1;
+        symbol [ markers %tmp.107 208 39 46 ];
+        %tmp.108 = lgetv %i.2;
+        symbol [ i %tmp.108 208 47 48 ];
+        %tmp.109 = agetv %tmp.107 %tmp.108;
+        %tmp.110 = 1;
+        %tmp.111 = agetv %tmp.109 %tmp.110;
+        symbol [ tinyFont %tmp.113 208 54 62 ];
+        %tmp.113 = getv ? :tinyFont;
+        %tmp.114 = lgetv %markers.1;
+        symbol [ markers %tmp.114 208 64 71 ];
+        %tmp.115 = lgetv %i.2;
+        symbol [ i %tmp.115 208 72 73 ];
+        %tmp.116 = agetv %tmp.114 %tmp.115;
+        %tmp.117 = 2;
+        %tmp.118 = agetv %tmp.116 %tmp.117;
+        symbol [ Graphics %tmp.119 209 23 31 ];
+        %tmp.119 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.120 209 32 51 ];
+        %tmp.120 = getv %tmp.119 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.121 209 54 62 ];
+        %tmp.121 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.122 209 63 83 ];
+        %tmp.122 = getv %tmp.121 :TEXT_JUSTIFY_VCENTER;
+        %tmp.123 = bitor %tmp.120 %tmp.122;
+        invoke %tmp.100 %tmp.101(%tmp.106, %tmp.111, %tmp.113, %tmp.118, %tmp.123);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_49_210_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 207 ]
+        %tmp.126 = lgetv %i.2;
+        symbol [ i %tmp.126 207 44 45 ];
+        %tmp.127 = add %tmp.126 1;
+        lputv %i.2 %tmp.127;
+        symbol [ i %i.2 207 44 45 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_207_8_210_8_for_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_197_35_211_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 214; @symbol_functiondef = [drawInterfaceCorners,214,13,33]; @symbol_param<0> = [dc,214,34,36]; ]
+    function drawInterfaceCorners(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_214_38_238_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 215 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 215 8 10 ];
+        symbol [ setColor %tmp.2 215 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 215 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 215 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 215 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 216 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 216 8 10 ];
+        symbol [ setPenWidth %tmp.8 216 11 22 ];
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 2;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 218 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_214_38_238_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_214_38_238_4_stop" ]
+        %margin.1 = local;
+        symbol [ margin %margin.1 218 12 18 ];
+        %tmp.10 = 20;
+        symbol [ scale %tmp.12 218 27 32 ];
+        %tmp.12 = getv ? :scale;
+        %tmp.13 = mul %tmp.10 %tmp.12;
+        symbol [ toNumber %tmp.14 218 34 42 ];
+        %tmp.14 = getv function %tmp.13 :toNumber;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %margin.1 %tmp.15;
+        symbol [ margin %margin.1 218 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 219 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_214_38_238_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_214_38_238_4_stop" ]
+        %length.2 = local;
+        symbol [ length %length.2 219 12 18 ];
+        %tmp.16 = 15;
+        symbol [ scale %tmp.18 219 27 32 ];
+        %tmp.18 = getv ? :scale;
+        %tmp.19 = mul %tmp.16 %tmp.18;
+        symbol [ toNumber %tmp.20 219 34 42 ];
+        %tmp.20 = getv function %tmp.19 :toNumber;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        lputv %length.2 %tmp.21;
+        symbol [ length %length.2 219 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 222 8 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 222 8 10 ];
+        symbol [ drawLine %tmp.23 222 11 19 ];
+        %tmp.23 = getv function %tmp.22 :drawLine;
+        %tmp.24 = lgetv %margin.1;
+        symbol [ margin %tmp.24 222 20 26 ];
+        %tmp.25 = lgetv %margin.1;
+        symbol [ margin %tmp.25 222 28 34 ];
+        %tmp.26 = lgetv %margin.1;
+        symbol [ margin %tmp.26 222 36 42 ];
+        %tmp.27 = lgetv %margin.1;
+        symbol [ margin %tmp.27 222 44 50 ];
+        %tmp.28 = lgetv %length.2;
+        symbol [ length %tmp.28 222 53 59 ];
+        %tmp.29 = add %tmp.27 %tmp.28;
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26, %tmp.29);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 223 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 223 8 10 ];
+        symbol [ drawLine %tmp.31 223 11 19 ];
+        %tmp.31 = getv function %tmp.30 :drawLine;
+        %tmp.32 = lgetv %margin.1;
+        symbol [ margin %tmp.32 223 20 26 ];
+        %tmp.33 = lgetv %margin.1;
+        symbol [ margin %tmp.33 223 28 34 ];
+        %tmp.34 = lgetv %margin.1;
+        symbol [ margin %tmp.34 223 36 42 ];
+        %tmp.35 = lgetv %length.2;
+        symbol [ length %tmp.35 223 45 51 ];
+        %tmp.36 = add %tmp.34 %tmp.35;
+        %tmp.37 = lgetv %margin.1;
+        symbol [ margin %tmp.37 223 53 59 ];
+        invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33, %tmp.36, %tmp.37);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 226 8 ]
+        %tmp.38 = lgetv %dc;
+        symbol [ dc %tmp.38 226 8 10 ];
+        symbol [ drawLine %tmp.39 226 11 19 ];
+        %tmp.39 = getv function %tmp.38 :drawLine;
+        symbol [ screenWidth %tmp.41 226 20 31 ];
+        %tmp.41 = getv ? :screenWidth;
+        %tmp.42 = lgetv %margin.1;
+        symbol [ margin %tmp.42 226 34 40 ];
+        %tmp.43 = sub %tmp.41 %tmp.42;
+        %tmp.44 = lgetv %margin.1;
+        symbol [ margin %tmp.44 226 42 48 ];
+        symbol [ screenWidth %tmp.46 226 50 61 ];
+        %tmp.46 = getv ? :screenWidth;
+        %tmp.47 = lgetv %margin.1;
+        symbol [ margin %tmp.47 226 64 70 ];
+        %tmp.48 = sub %tmp.46 %tmp.47;
+        %tmp.49 = lgetv %margin.1;
+        symbol [ margin %tmp.49 226 72 78 ];
+        %tmp.50 = lgetv %length.2;
+        symbol [ length %tmp.50 226 81 87 ];
+        %tmp.51 = add %tmp.49 %tmp.50;
+        invoke %tmp.38 %tmp.39(%tmp.43, %tmp.44, %tmp.48, %tmp.51);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 227 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 227 8 10 ];
+        symbol [ drawLine %tmp.53 227 11 19 ];
+        %tmp.53 = getv function %tmp.52 :drawLine;
+        symbol [ screenWidth %tmp.55 227 20 31 ];
+        %tmp.55 = getv ? :screenWidth;
+        %tmp.56 = lgetv %margin.1;
+        symbol [ margin %tmp.56 227 34 40 ];
+        %tmp.57 = sub %tmp.55 %tmp.56;
+        %tmp.58 = lgetv %margin.1;
+        symbol [ margin %tmp.58 227 42 48 ];
+        symbol [ screenWidth %tmp.60 227 50 61 ];
+        %tmp.60 = getv ? :screenWidth;
+        %tmp.61 = lgetv %margin.1;
+        symbol [ margin %tmp.61 227 64 70 ];
+        %tmp.62 = sub %tmp.60 %tmp.61;
+        %tmp.63 = lgetv %length.2;
+        symbol [ length %tmp.63 227 73 79 ];
+        %tmp.64 = sub %tmp.62 %tmp.63;
+        %tmp.65 = lgetv %margin.1;
+        symbol [ margin %tmp.65 227 81 87 ];
+        invoke %tmp.52 %tmp.53(%tmp.57, %tmp.58, %tmp.64, %tmp.65);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 230 8 ]
+        %tmp.66 = lgetv %dc;
+        symbol [ dc %tmp.66 230 8 10 ];
+        symbol [ drawLine %tmp.67 230 11 19 ];
+        %tmp.67 = getv function %tmp.66 :drawLine;
+        %tmp.68 = lgetv %margin.1;
+        symbol [ margin %tmp.68 230 20 26 ];
+        symbol [ screenHeight %tmp.70 230 28 40 ];
+        %tmp.70 = getv ? :screenHeight;
+        %tmp.71 = lgetv %margin.1;
+        symbol [ margin %tmp.71 230 43 49 ];
+        %tmp.72 = sub %tmp.70 %tmp.71;
+        %tmp.73 = lgetv %margin.1;
+        symbol [ margin %tmp.73 230 51 57 ];
+        symbol [ screenHeight %tmp.75 230 59 71 ];
+        %tmp.75 = getv ? :screenHeight;
+        %tmp.76 = lgetv %margin.1;
+        symbol [ margin %tmp.76 230 74 80 ];
+        %tmp.77 = sub %tmp.75 %tmp.76;
+        %tmp.78 = lgetv %length.2;
+        symbol [ length %tmp.78 230 83 89 ];
+        %tmp.79 = sub %tmp.77 %tmp.78;
+        invoke %tmp.66 %tmp.67(%tmp.68, %tmp.72, %tmp.73, %tmp.79);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 231 8 ]
+        %tmp.80 = lgetv %dc;
+        symbol [ dc %tmp.80 231 8 10 ];
+        symbol [ drawLine %tmp.81 231 11 19 ];
+        %tmp.81 = getv function %tmp.80 :drawLine;
+        %tmp.82 = lgetv %margin.1;
+        symbol [ margin %tmp.82 231 20 26 ];
+        symbol [ screenHeight %tmp.84 231 28 40 ];
+        %tmp.84 = getv ? :screenHeight;
+        %tmp.85 = lgetv %margin.1;
+        symbol [ margin %tmp.85 231 43 49 ];
+        %tmp.86 = sub %tmp.84 %tmp.85;
+        %tmp.87 = lgetv %margin.1;
+        symbol [ margin %tmp.87 231 51 57 ];
+        %tmp.88 = lgetv %length.2;
+        symbol [ length %tmp.88 231 60 66 ];
+        %tmp.89 = add %tmp.87 %tmp.88;
+        symbol [ screenHeight %tmp.91 231 68 80 ];
+        %tmp.91 = getv ? :screenHeight;
+        %tmp.92 = lgetv %margin.1;
+        symbol [ margin %tmp.92 231 83 89 ];
+        %tmp.93 = sub %tmp.91 %tmp.92;
+        invoke %tmp.80 %tmp.81(%tmp.82, %tmp.86, %tmp.89, %tmp.93);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 234 8 ]
+        %tmp.94 = lgetv %dc;
+        symbol [ dc %tmp.94 234 8 10 ];
+        symbol [ drawLine %tmp.95 234 11 19 ];
+        %tmp.95 = getv function %tmp.94 :drawLine;
+        symbol [ screenWidth %tmp.97 234 20 31 ];
+        %tmp.97 = getv ? :screenWidth;
+        %tmp.98 = lgetv %margin.1;
+        symbol [ margin %tmp.98 234 34 40 ];
+        %tmp.99 = sub %tmp.97 %tmp.98;
+        symbol [ screenHeight %tmp.101 234 42 54 ];
+        %tmp.101 = getv ? :screenHeight;
+        %tmp.102 = lgetv %margin.1;
+        symbol [ margin %tmp.102 234 57 63 ];
+        %tmp.103 = sub %tmp.101 %tmp.102;
+        symbol [ screenWidth %tmp.105 235 19 30 ];
+        %tmp.105 = getv ? :screenWidth;
+        %tmp.106 = lgetv %margin.1;
+        symbol [ margin %tmp.106 235 33 39 ];
+        %tmp.107 = sub %tmp.105 %tmp.106;
+        symbol [ screenHeight %tmp.109 235 41 53 ];
+        %tmp.109 = getv ? :screenHeight;
+        %tmp.110 = lgetv %margin.1;
+        symbol [ margin %tmp.110 235 56 62 ];
+        %tmp.111 = sub %tmp.109 %tmp.110;
+        %tmp.112 = lgetv %length.2;
+        symbol [ length %tmp.112 235 65 71 ];
+        %tmp.113 = sub %tmp.111 %tmp.112;
+        invoke %tmp.94 %tmp.95(%tmp.99, %tmp.103, %tmp.107, %tmp.113);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 236 8 ]
+        %tmp.114 = lgetv %dc;
+        symbol [ dc %tmp.114 236 8 10 ];
+        symbol [ drawLine %tmp.115 236 11 19 ];
+        %tmp.115 = getv function %tmp.114 :drawLine;
+        symbol [ screenWidth %tmp.117 236 20 31 ];
+        %tmp.117 = getv ? :screenWidth;
+        %tmp.118 = lgetv %margin.1;
+        symbol [ margin %tmp.118 236 34 40 ];
+        %tmp.119 = sub %tmp.117 %tmp.118;
+        symbol [ screenHeight %tmp.121 236 42 54 ];
+        %tmp.121 = getv ? :screenHeight;
+        %tmp.122 = lgetv %margin.1;
+        symbol [ margin %tmp.122 236 57 63 ];
+        %tmp.123 = sub %tmp.121 %tmp.122;
+        symbol [ screenWidth %tmp.125 237 19 30 ];
+        %tmp.125 = getv ? :screenWidth;
+        %tmp.126 = lgetv %margin.1;
+        symbol [ margin %tmp.126 237 33 39 ];
+        %tmp.127 = sub %tmp.125 %tmp.126;
+        %tmp.128 = lgetv %length.2;
+        symbol [ length %tmp.128 237 42 48 ];
+        %tmp.129 = sub %tmp.127 %tmp.128;
+        symbol [ screenHeight %tmp.131 237 50 62 ];
+        %tmp.131 = getv ? :screenHeight;
+        %tmp.132 = lgetv %margin.1;
+        symbol [ margin %tmp.132 237 65 71 ];
+        %tmp.133 = sub %tmp.131 %tmp.132;
+        invoke %tmp.114 %tmp.115(%tmp.119, %tmp.123, %tmp.129, %tmp.133);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_214_38_238_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 241; @symbol_functiondef = [drawCenterDot,241,13,26]; @symbol_param<0> = [dc,241,27,29]; ]
+    function drawCenterDot(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_241_31_247_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 242 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 242 8 10 ];
+        symbol [ setColor %tmp.2 242 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 242 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 242 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 242 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 243 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 243 8 10 ];
+        symbol [ fillCircle %tmp.8 243 11 21 ];
+        %tmp.8 = getv function %tmp.7 :fillCircle;
+        symbol [ centerX %tmp.10 243 22 29 ];
+        %tmp.10 = getv ? :centerX;
+        symbol [ centerY %tmp.12 243 31 38 ];
+        %tmp.12 = getv ? :centerY;
+        %tmp.13 = 3;
+        symbol [ scale %tmp.15 243 45 50 ];
+        %tmp.15 = getv ? :scale;
+        %tmp.16 = mul %tmp.13 %tmp.15;
+        symbol [ toNumber %tmp.17 243 52 60 ];
+        %tmp.17 = getv function %tmp.16 :toNumber;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12, %tmp.18);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 245 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 245 8 10 ];
+        symbol [ setColor %tmp.20 245 11 19 ];
+        %tmp.20 = getv function %tmp.19 :setColor;
+        symbol [ BG_COLOR %tmp.22 245 20 28 ];
+        %tmp.22 = getv ? :BG_COLOR;
+        symbol [ Graphics %tmp.23 245 30 38 ];
+        %tmp.23 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.24 245 39 56 ];
+        %tmp.24 = getv %tmp.23 :COLOR_TRANSPARENT;
+        invoke %tmp.19 %tmp.20(%tmp.22, %tmp.24);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 246 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 246 8 10 ];
+        symbol [ fillCircle %tmp.26 246 11 21 ];
+        %tmp.26 = getv function %tmp.25 :fillCircle;
+        symbol [ centerX %tmp.28 246 22 29 ];
+        %tmp.28 = getv ? :centerX;
+        symbol [ centerY %tmp.30 246 31 38 ];
+        %tmp.30 = getv ? :centerY;
+        %tmp.31 = 1.5;
+        symbol [ scale %tmp.33 246 47 52 ];
+        %tmp.33 = getv ? :scale;
+        %tmp.34 = mul %tmp.31 %tmp.33;
+        symbol [ toNumber %tmp.35 246 54 62 ];
+        %tmp.35 = getv function %tmp.34 :toNumber;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30, %tmp.36);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_241_31_247_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 250; @symbol_functiondef = [drawStaticLabels,250,13,29]; @symbol_param<0> = [dc,250,30,32]; ]
+    function drawStaticLabels(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_250_34_256_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 251 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 251 8 10 ];
+        symbol [ setColor %tmp.2 251 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 251 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 251 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 251 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 254 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 254 8 10 ];
+        symbol [ drawText %tmp.8 254 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        %tmp.9 = 40;
+        symbol [ scale %tmp.11 254 26 31 ];
+        %tmp.11 = getv ? :scale;
+        %tmp.12 = mul %tmp.9 %tmp.11;
+        symbol [ toNumber %tmp.13 254 33 41 ];
+        %tmp.13 = getv function %tmp.12 :toNumber;
+        %tmp.14 = invoke %tmp.12 %tmp.13();
+        %tmp.15 = 215;
+        symbol [ scale %tmp.17 254 52 57 ];
+        %tmp.17 = getv ? :scale;
+        %tmp.18 = mul %tmp.15 %tmp.17;
+        symbol [ toNumber %tmp.19 254 59 67 ];
+        %tmp.19 = getv function %tmp.18 :toNumber;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        symbol [ tinyFont %tmp.22 254 71 79 ];
+        %tmp.22 = getv ? :tinyFont;
+        %tmp.23 = "TACTICAL";
+        symbol [ Graphics %tmp.24 255 19 27 ];
+        %tmp.24 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.25 255 28 45 ];
+        %tmp.25 = getv %tmp.24 :TEXT_JUSTIFY_LEFT;
+        symbol [ Graphics %tmp.26 255 48 56 ];
+        %tmp.26 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.27 255 57 77 ];
+        %tmp.27 = getv %tmp.26 :TEXT_JUSTIFY_VCENTER;
+        %tmp.28 = bitor %tmp.25 %tmp.27;
+        invoke %tmp.7 %tmp.8(%tmp.14, %tmp.20, %tmp.22, %tmp.23, %tmp.28);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_250_34_256_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 259; @symbol_functiondef = [drawDistanceScale,259,13,30]; @symbol_param<0> = [dc,259,31,33]; ]
+    function drawDistanceScale(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 260 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 260 8 10 ];
+        symbol [ setColor %tmp.2 260 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 260 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 260 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 260 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 261 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 261 8 10 ];
+        symbol [ setPenWidth %tmp.8 261 11 22 ];
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 1;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 263 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_stop" ]
+        %x1.1 = local;
+        symbol [ x1 %x1.1 263 12 14 ];
+        %tmp.10 = 25;
+        symbol [ scale %tmp.12 263 23 28 ];
+        %tmp.12 = getv ? :scale;
+        %tmp.13 = mul %tmp.10 %tmp.12;
+        symbol [ toNumber %tmp.14 263 30 38 ];
+        %tmp.14 = getv function %tmp.13 :toNumber;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        lputv %x1.1 %tmp.15;
+        symbol [ x1 %x1.1 263 12 14 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 264 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_stop" ]
+        %x2.2 = local;
+        symbol [ x2 %x2.2 264 12 14 ];
+        %tmp.16 = 35;
+        symbol [ scale %tmp.18 264 23 28 ];
+        %tmp.18 = getv ? :scale;
+        %tmp.19 = mul %tmp.16 %tmp.18;
+        symbol [ toNumber %tmp.20 264 30 38 ];
+        %tmp.20 = getv function %tmp.19 :toNumber;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        lputv %x2.2 %tmp.21;
+        symbol [ x2 %x2.2 264 12 14 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 265 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 265 12 13 ];
+        %tmp.22 = 215;
+        symbol [ scale %tmp.24 265 23 28 ];
+        %tmp.24 = getv ? :scale;
+        %tmp.25 = mul %tmp.22 %tmp.24;
+        symbol [ toNumber %tmp.26 265 30 38 ];
+        %tmp.26 = getv function %tmp.25 :toNumber;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        lputv %y.3 %tmp.27;
+        symbol [ y %y.3 265 12 13 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 267 8 ]
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 267 8 10 ];
+        symbol [ drawLine %tmp.29 267 11 19 ];
+        %tmp.29 = getv function %tmp.28 :drawLine;
+        %tmp.30 = lgetv %x1.1;
+        symbol [ x1 %tmp.30 267 20 22 ];
+        %tmp.31 = lgetv %y.3;
+        symbol [ y %tmp.31 267 24 25 ];
+        %tmp.32 = lgetv %x2.2;
+        symbol [ x2 %tmp.32 267 27 29 ];
+        %tmp.33 = lgetv %y.3;
+        symbol [ y %tmp.33 267 31 32 ];
+        invoke %tmp.28 %tmp.29(%tmp.30, %tmp.31, %tmp.32, %tmp.33);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 268 8 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 268 8 10 ];
+        symbol [ drawLine %tmp.35 268 11 19 ];
+        %tmp.35 = getv function %tmp.34 :drawLine;
+        %tmp.36 = lgetv %x1.1;
+        symbol [ x1 %tmp.36 268 20 22 ];
+        %tmp.37 = lgetv %y.3;
+        symbol [ y %tmp.37 268 24 25 ];
+        %tmp.38 = lgetv %x1.1;
+        symbol [ x1 %tmp.38 268 27 29 ];
+        %tmp.39 = lgetv %y.3;
+        symbol [ y %tmp.39 268 32 33 ];
+        %tmp.40 = 5;
+        symbol [ scale %tmp.42 268 38 43 ];
+        %tmp.42 = getv ? :scale;
+        %tmp.43 = mul %tmp.40 %tmp.42;
+        %tmp.44 = sub %tmp.39 %tmp.43;
+        symbol [ toNumber %tmp.45 268 45 53 ];
+        %tmp.45 = getv function %tmp.44 :toNumber;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.38, %tmp.46);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 269 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 269 8 10 ];
+        symbol [ drawLine %tmp.48 269 11 19 ];
+        %tmp.48 = getv function %tmp.47 :drawLine;
+        %tmp.49 = lgetv %x2.2;
+        symbol [ x2 %tmp.49 269 20 22 ];
+        %tmp.50 = lgetv %y.3;
+        symbol [ y %tmp.50 269 24 25 ];
+        %tmp.51 = lgetv %x2.2;
+        symbol [ x2 %tmp.51 269 27 29 ];
+        %tmp.52 = lgetv %y.3;
+        symbol [ y %tmp.52 269 32 33 ];
+        %tmp.53 = 5;
+        symbol [ scale %tmp.55 269 38 43 ];
+        %tmp.55 = getv ? :scale;
+        %tmp.56 = mul %tmp.53 %tmp.55;
+        %tmp.57 = sub %tmp.52 %tmp.56;
+        symbol [ toNumber %tmp.58 269 45 53 ];
+        %tmp.58 = getv function %tmp.57 :toNumber;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.50, %tmp.51, %tmp.59);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 271 8 ]
+        %tmp.60 = lgetv %dc;
+        symbol [ dc %tmp.60 271 8 10 ];
+        symbol [ drawText %tmp.61 271 11 19 ];
+        %tmp.61 = getv function %tmp.60 :drawText;
+        %tmp.62 = 30;
+        symbol [ scale %tmp.64 271 26 31 ];
+        %tmp.64 = getv ? :scale;
+        %tmp.65 = mul %tmp.62 %tmp.64;
+        symbol [ toNumber %tmp.66 271 33 41 ];
+        %tmp.66 = getv function %tmp.65 :toNumber;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        %tmp.68 = lgetv %y.3;
+        symbol [ y %tmp.68 271 46 47 ];
+        %tmp.69 = 8;
+        symbol [ scale %tmp.71 271 52 57 ];
+        %tmp.71 = getv ? :scale;
+        %tmp.72 = mul %tmp.69 %tmp.71;
+        %tmp.73 = sub %tmp.68 %tmp.72;
+        symbol [ toNumber %tmp.74 271 59 67 ];
+        %tmp.74 = getv function %tmp.73 :toNumber;
+        %tmp.75 = invoke %tmp.73 %tmp.74();
+        symbol [ tinyFont %tmp.77 271 71 79 ];
+        %tmp.77 = getv ? :tinyFont;
+        %tmp.78 = "10M";
+        symbol [ Graphics %tmp.79 272 19 27 ];
+        %tmp.79 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.80 272 28 47 ];
+        %tmp.80 = getv %tmp.79 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.60 %tmp.61(%tmp.67, %tmp.75, %tmp.77, %tmp.78, %tmp.80);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_259_35_273_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 276; @symbol_functiondef = [clearDynamicAreas,276,13,30]; @symbol_param<0> = [dc,276,31,33]; ]
+    function clearDynamicAreas(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_276_35_285_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 277 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 277 8 10 ];
+        symbol [ setColor %tmp.2 277 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ BG_COLOR %tmp.4 277 20 28 ];
+        %tmp.4 = getv ? :BG_COLOR;
+        symbol [ BG_COLOR %tmp.6 277 30 38 ];
+        %tmp.6 = getv ? :BG_COLOR;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 280 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 280 8 10 ];
+        symbol [ fillCircle %tmp.8 280 11 21 ];
+        %tmp.8 = getv function %tmp.7 :fillCircle;
+        symbol [ centerX %tmp.10 280 22 29 ];
+        %tmp.10 = getv ? :centerX;
+        symbol [ centerY %tmp.12 280 31 38 ];
+        %tmp.12 = getv ? :centerY;
+        %tmp.13 = 115;
+        symbol [ scale %tmp.15 280 47 52 ];
+        %tmp.15 = getv ? :scale;
+        %tmp.16 = mul %tmp.13 %tmp.15;
+        symbol [ toNumber %tmp.17 280 54 62 ];
+        %tmp.17 = getv function %tmp.16 :toNumber;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12, %tmp.18);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 283 8 ]
+        %tmp.19 = self;
+        symbol [ drawConcentricCircles %tmp.20 283 8 29 ];
+        %tmp.20 = getv function %tmp.19 :drawConcentricCircles;
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 283 30 32 ];
+        invoke %tmp.19 %tmp.20(%tmp.21);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 284 8 ]
+        %tmp.22 = self;
+        symbol [ drawCentralCross %tmp.23 284 8 24 ];
+        %tmp.23 = getv function %tmp.22 :drawCentralCross;
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 284 25 27 ];
+        invoke %tmp.22 %tmp.23(%tmp.24);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_276_35_285_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 288; @symbol_functiondef = [drawScanLine,288,13,25]; @symbol_param<0> = [dc,288,26,28]; ]
+    function drawScanLine(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 289 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_stop" ]
+        %radius.1 = local;
+        symbol [ radius %radius.1 289 12 18 ];
+        %tmp.1 = 110;
+        symbol [ scale %tmp.3 289 27 32 ];
+        %tmp.3 = getv ? :scale;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        lputv %radius.1 %tmp.4;
+        symbol [ radius %radius.1 289 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 290 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_stop" ]
+        %radians.2 = local;
+        symbol [ radians %radians.2 290 12 19 ];
+        symbol [ Math %tmp.5 290 22 26 ];
+        %tmp.5 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.6 290 27 36 ];
+        %tmp.6 = getv function %tmp.5 :toRadians;
+        symbol [ scanAngle %tmp.8 290 37 46 ];
+        %tmp.8 = getv ? :scanAngle;
+        %tmp.9 = 90;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        %tmp.11 = invoke %tmp.5 %tmp.6(%tmp.10);
+        lputv %radians.2 %tmp.11;
+        symbol [ radians %radians.2 290 12 19 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 291 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_stop" ]
+        %endX.3 = local;
+        symbol [ endX %endX.3 291 12 16 ];
+        symbol [ centerX %tmp.13 291 20 27 ];
+        %tmp.13 = getv ? :centerX;
+        %tmp.14 = lgetv %radius.1;
+        symbol [ radius %tmp.14 291 30 36 ];
+        symbol [ Math %tmp.15 291 39 43 ];
+        %tmp.15 = getm $.Toybox.Math;
+        symbol [ cos %tmp.16 291 44 47 ];
+        %tmp.16 = getv function %tmp.15 :cos;
+        %tmp.17 = lgetv %radians.2;
+        symbol [ radians %tmp.17 291 48 55 ];
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = mul %tmp.14 %tmp.18;
+        %tmp.20 = add %tmp.13 %tmp.19;
+        symbol [ toNumber %tmp.21 291 58 66 ];
+        %tmp.21 = getv function %tmp.20 :toNumber;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        lputv %endX.3 %tmp.22;
+        symbol [ endX %endX.3 291 12 16 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 292 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_stop" ]
+        %endY.4 = local;
+        symbol [ endY %endY.4 292 12 16 ];
+        symbol [ centerY %tmp.24 292 20 27 ];
+        %tmp.24 = getv ? :centerY;
+        %tmp.25 = lgetv %radius.1;
+        symbol [ radius %tmp.25 292 30 36 ];
+        symbol [ Math %tmp.26 292 39 43 ];
+        %tmp.26 = getm $.Toybox.Math;
+        symbol [ sin %tmp.27 292 44 47 ];
+        %tmp.27 = getv function %tmp.26 :sin;
+        %tmp.28 = lgetv %radians.2;
+        symbol [ radians %tmp.28 292 48 55 ];
+        %tmp.29 = invoke %tmp.26 %tmp.27(%tmp.28);
+        %tmp.30 = mul %tmp.25 %tmp.29;
+        %tmp.31 = add %tmp.24 %tmp.30;
+        symbol [ toNumber %tmp.32 292 58 66 ];
+        %tmp.32 = getv function %tmp.31 :toNumber;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        lputv %endY.4 %tmp.33;
+        symbol [ endY %endY.4 292 12 16 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 294 8 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 294 8 10 ];
+        symbol [ setColor %tmp.35 294 11 19 ];
+        %tmp.35 = getv function %tmp.34 :setColor;
+        symbol [ RADAR_GREEN %tmp.37 294 20 31 ];
+        %tmp.37 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.38 294 33 41 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.39 294 42 59 ];
+        %tmp.39 = getv %tmp.38 :COLOR_TRANSPARENT;
+        invoke %tmp.34 %tmp.35(%tmp.37, %tmp.39);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 295 8 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 295 8 10 ];
+        symbol [ setPenWidth %tmp.41 295 11 22 ];
+        %tmp.41 = getv function %tmp.40 :setPenWidth;
+        %tmp.42 = 2;
+        invoke %tmp.40 %tmp.41(%tmp.42);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 296 8 ]
+        %tmp.43 = lgetv %dc;
+        symbol [ dc %tmp.43 296 8 10 ];
+        symbol [ drawLine %tmp.44 296 11 19 ];
+        %tmp.44 = getv function %tmp.43 :drawLine;
+        symbol [ centerX %tmp.46 296 20 27 ];
+        %tmp.46 = getv ? :centerX;
+        symbol [ centerY %tmp.48 296 29 36 ];
+        %tmp.48 = getv ? :centerY;
+        %tmp.49 = lgetv %endX.3;
+        symbol [ endX %tmp.49 296 38 42 ];
+        %tmp.50 = lgetv %endY.4;
+        symbol [ endY %tmp.50 296 44 48 ];
+        invoke %tmp.43 %tmp.44(%tmp.46, %tmp.48, %tmp.49, %tmp.50);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 299 8 ]
+        %tmp.51 = self;
+        symbol [ drawScanTriangle %tmp.52 299 8 24 ];
+        %tmp.52 = getv function %tmp.51 :drawScanTriangle;
+        %tmp.53 = lgetv %dc;
+        symbol [ dc %tmp.53 299 25 27 ];
+        %tmp.54 = lgetv %endX.3;
+        symbol [ endX %tmp.54 299 29 33 ];
+        %tmp.55 = lgetv %endY.4;
+        symbol [ endY %tmp.55 299 35 39 ];
+        symbol [ scanAngle %tmp.57 299 41 50 ];
+        %tmp.57 = getv ? :scanAngle;
+        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.54, %tmp.55, %tmp.57);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_288_30_300_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 303; @symbol_functiondef = [drawScanTriangle,303,13,29]; @symbol_param<0> = [dc,303,30,32]; @symbol_param<1> = [x,303,34,35]; @symbol_param<2> = [y,303,37,38]; @symbol_param<3> = [angle,303,40,45]; ]
+    function drawScanTriangle(dc, x, y, angle) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 304 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_stop" ]
+        %size.1 = local;
+        symbol [ size %size.1 304 12 16 ];
+        %tmp.1 = 5;
+        symbol [ scale %tmp.3 304 23 28 ];
+        %tmp.3 = getv ? :scale;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        lputv %size.1 %tmp.4;
+        symbol [ size %size.1 304 12 16 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 305 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_stop" ]
+        %radians.2 = local;
+        symbol [ radians %radians.2 305 12 19 ];
+        symbol [ Math %tmp.5 305 22 26 ];
+        %tmp.5 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.6 305 27 36 ];
+        %tmp.6 = getv function %tmp.5 :toRadians;
+        %tmp.7 = lgetv %angle;
+        symbol [ angle %tmp.7 305 37 42 ];
+        %tmp.8 = 90;
+        %tmp.9 = sub %tmp.7 %tmp.8;
+        %tmp.10 = invoke %tmp.5 %tmp.6(%tmp.9);
+        lputv %radians.2 %tmp.10;
+        symbol [ radians %radians.2 305 12 19 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 308 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_stop" ]
+        %points.3 = local;
+        symbol [ points %points.3 308 12 18 ];
+        %tmp.11 = newa 3;
+        %tmp.12 = newa 2;
+        %tmp.13 = lgetv %x;
+        symbol [ x %tmp.13 309 14 15 ];
+        %tmp.14 = lgetv %size.1;
+        symbol [ size %tmp.14 309 18 22 ];
+        symbol [ Math %tmp.15 309 25 29 ];
+        %tmp.15 = getm $.Toybox.Math;
+        symbol [ cos %tmp.16 309 30 33 ];
+        %tmp.16 = getv function %tmp.15 :cos;
+        %tmp.17 = lgetv %radians.2;
+        symbol [ radians %tmp.17 309 34 41 ];
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = mul %tmp.14 %tmp.18;
+        %tmp.20 = add %tmp.13 %tmp.19;
+        symbol [ toNumber %tmp.21 309 44 52 ];
+        %tmp.21 = getv function %tmp.20 :toNumber;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = dup %tmp.12;
+        %tmp.24 = aputv %tmp.23 0 %tmp.22;
+        %tmp.25 = lgetv %y;
+        symbol [ y %tmp.25 309 57 58 ];
+        %tmp.26 = lgetv %size.1;
+        symbol [ size %tmp.26 309 61 65 ];
+        symbol [ Math %tmp.27 309 68 72 ];
+        %tmp.27 = getm $.Toybox.Math;
+        symbol [ sin %tmp.28 309 73 76 ];
+        %tmp.28 = getv function %tmp.27 :sin;
+        %tmp.29 = lgetv %radians.2;
+        symbol [ radians %tmp.29 309 77 84 ];
+        %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+        %tmp.31 = mul %tmp.26 %tmp.30;
+        %tmp.32 = add %tmp.25 %tmp.31;
+        symbol [ toNumber %tmp.33 309 87 95 ];
+        %tmp.33 = getv function %tmp.32 :toNumber;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = dup %tmp.24;
+        %tmp.36 = aputv %tmp.35 1 %tmp.34;
+        %tmp.37 = dup %tmp.11;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.39 = newa 2;
+        %tmp.40 = lgetv %x;
+        symbol [ x %tmp.40 310 14 15 ];
+        %tmp.41 = lgetv %size.1;
+        symbol [ size %tmp.41 310 18 22 ];
+        symbol [ Math %tmp.42 310 25 29 ];
+        %tmp.42 = getm $.Toybox.Math;
+        symbol [ cos %tmp.43 310 30 33 ];
+        %tmp.43 = getv function %tmp.42 :cos;
+        %tmp.44 = lgetv %radians.2;
+        symbol [ radians %tmp.44 310 34 41 ];
+        %tmp.45 = 2.5;
+        %tmp.46 = add %tmp.44 %tmp.45;
+        %tmp.47 = invoke %tmp.42 %tmp.43(%tmp.46);
+        %tmp.48 = mul %tmp.41 %tmp.47;
+        %tmp.49 = add %tmp.40 %tmp.48;
+        symbol [ toNumber %tmp.50 310 50 58 ];
+        %tmp.50 = getv function %tmp.49 :toNumber;
+        %tmp.51 = invoke %tmp.49 %tmp.50();
+        %tmp.52 = dup %tmp.39;
+        %tmp.53 = aputv %tmp.52 0 %tmp.51;
+        %tmp.54 = lgetv %y;
+        symbol [ y %tmp.54 310 63 64 ];
+        %tmp.55 = lgetv %size.1;
+        symbol [ size %tmp.55 310 67 71 ];
+        symbol [ Math %tmp.56 310 74 78 ];
+        %tmp.56 = getm $.Toybox.Math;
+        symbol [ sin %tmp.57 310 79 82 ];
+        %tmp.57 = getv function %tmp.56 :sin;
+        %tmp.58 = lgetv %radians.2;
+        symbol [ radians %tmp.58 310 83 90 ];
+        %tmp.59 = 2.5;
+        %tmp.60 = add %tmp.58 %tmp.59;
+        %tmp.61 = invoke %tmp.56 %tmp.57(%tmp.60);
+        %tmp.62 = mul %tmp.55 %tmp.61;
+        %tmp.63 = add %tmp.54 %tmp.62;
+        symbol [ toNumber %tmp.64 310 99 107 ];
+        %tmp.64 = getv function %tmp.63 :toNumber;
+        %tmp.65 = invoke %tmp.63 %tmp.64();
+        %tmp.66 = dup %tmp.53;
+        %tmp.67 = aputv %tmp.66 1 %tmp.65;
+        %tmp.68 = dup %tmp.38;
+        %tmp.69 = aputv %tmp.68 1 %tmp.67;
+        %tmp.70 = newa 2;
+        %tmp.71 = lgetv %x;
+        symbol [ x %tmp.71 311 14 15 ];
+        %tmp.72 = lgetv %size.1;
+        symbol [ size %tmp.72 311 18 22 ];
+        symbol [ Math %tmp.73 311 25 29 ];
+        %tmp.73 = getm $.Toybox.Math;
+        symbol [ cos %tmp.74 311 30 33 ];
+        %tmp.74 = getv function %tmp.73 :cos;
+        %tmp.75 = lgetv %radians.2;
+        symbol [ radians %tmp.75 311 34 41 ];
+        %tmp.76 = 2.5;
+        %tmp.77 = sub %tmp.75 %tmp.76;
+        %tmp.78 = invoke %tmp.73 %tmp.74(%tmp.77);
+        %tmp.79 = mul %tmp.72 %tmp.78;
+        %tmp.80 = add %tmp.71 %tmp.79;
+        symbol [ toNumber %tmp.81 311 50 58 ];
+        %tmp.81 = getv function %tmp.80 :toNumber;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        %tmp.83 = dup %tmp.70;
+        %tmp.84 = aputv %tmp.83 0 %tmp.82;
+        %tmp.85 = lgetv %y;
+        symbol [ y %tmp.85 311 63 64 ];
+        %tmp.86 = lgetv %size.1;
+        symbol [ size %tmp.86 311 67 71 ];
+        symbol [ Math %tmp.87 311 74 78 ];
+        %tmp.87 = getm $.Toybox.Math;
+        symbol [ sin %tmp.88 311 79 82 ];
+        %tmp.88 = getv function %tmp.87 :sin;
+        %tmp.89 = lgetv %radians.2;
+        symbol [ radians %tmp.89 311 83 90 ];
+        %tmp.90 = 2.5;
+        %tmp.91 = sub %tmp.89 %tmp.90;
+        %tmp.92 = invoke %tmp.87 %tmp.88(%tmp.91);
+        %tmp.93 = mul %tmp.86 %tmp.92;
+        %tmp.94 = add %tmp.85 %tmp.93;
+        symbol [ toNumber %tmp.95 311 99 107 ];
+        %tmp.95 = getv function %tmp.94 :toNumber;
+        %tmp.96 = invoke %tmp.94 %tmp.95();
+        %tmp.97 = dup %tmp.84;
+        %tmp.98 = aputv %tmp.97 1 %tmp.96;
+        %tmp.99 = dup %tmp.69;
+        %tmp.100 = aputv %tmp.99 2 %tmp.98;
+        lputv %points.3 %tmp.100;
+        symbol [ points %points.3 308 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 314 8 ]
+        %tmp.101 = lgetv %dc;
+        symbol [ dc %tmp.101 314 8 10 ];
+        symbol [ setColor %tmp.102 314 11 19 ];
+        %tmp.102 = getv function %tmp.101 :setColor;
+        symbol [ RADAR_GREEN %tmp.104 314 20 31 ];
+        %tmp.104 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.105 314 33 41 ];
+        %tmp.105 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.106 314 42 59 ];
+        %tmp.106 = getv %tmp.105 :COLOR_TRANSPARENT;
+        invoke %tmp.101 %tmp.102(%tmp.104, %tmp.106);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 315 8 ]
+        %tmp.107 = lgetv %dc;
+        symbol [ dc %tmp.107 315 8 10 ];
+        symbol [ fillPolygon %tmp.108 315 11 22 ];
+        %tmp.108 = getv function %tmp.107 :fillPolygon;
+        %tmp.109 = lgetv %points.3;
+        symbol [ points %tmp.109 315 23 29 ];
+        invoke %tmp.107 %tmp.108(%tmp.109);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_303_47_316_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 319; @symbol_functiondef = [drawScanTrail,319,13,26]; @symbol_param<0> = [dc,319,27,29]; ]
+    function drawScanTrail(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 320 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_stop" ]
+        %radius.1 = local;
+        symbol [ radius %radius.1 320 12 18 ];
+        %tmp.1 = 110;
+        symbol [ scale %tmp.3 320 28 33 ];
+        %tmp.3 = getv ? :scale;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        symbol [ toNumber %tmp.5 320 35 43 ];
+        %tmp.5 = getv function %tmp.4 :toNumber;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %radius.1 %tmp.6;
+        symbol [ radius %radius.1 320 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 321 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_stop" ]
+        %trailSpan.2 = local;
+        symbol [ trailSpan %trailSpan.2 321 12 21 ];
+        %tmp.7 = 45;
+        lputv %trailSpan.2 %tmp.7;
+        symbol [ trailSpan %trailSpan.2 321 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 322 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_stop" ]
+        %startAngle.3 = local;
+        symbol [ startAngle %startAngle.3 322 12 22 ];
+        symbol [ scanAngle %tmp.9 322 25 34 ];
+        %tmp.9 = getv ? :scanAngle;
+        %tmp.10 = lgetv %trailSpan.2;
+        symbol [ trailSpan %tmp.10 322 37 46 ];
+        %tmp.11 = sub %tmp.9 %tmp.10;
+        lputv %startAngle.3 %tmp.11;
+        symbol [ startAngle %startAngle.3 322 12 22 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 323 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_stop" ]
+        %endAngle.4 = local;
+        symbol [ endAngle %endAngle.4 323 12 20 ];
+        symbol [ scanAngle %tmp.13 323 23 32 ];
+        %tmp.13 = getv ? :scanAngle;
+        lputv %endAngle.4 %tmp.13;
+        symbol [ endAngle %endAngle.4 323 12 20 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 325 8 ]
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 325 8 10 ];
+        symbol [ setColor %tmp.15 325 11 19 ];
+        %tmp.15 = getv function %tmp.14 :setColor;
+        symbol [ RADAR_GREEN %tmp.17 325 20 31 ];
+        %tmp.17 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.18 325 33 41 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.19 325 42 59 ];
+        %tmp.19 = getv %tmp.18 :COLOR_TRANSPARENT;
+        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.19);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 326 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 326 8 10 ];
+        symbol [ setPenWidth %tmp.21 326 11 22 ];
+        %tmp.21 = getv function %tmp.20 :setPenWidth;
+        %tmp.22 = 15;
+        symbol [ scale %tmp.24 326 29 34 ];
+        %tmp.24 = getv ? :scale;
+        %tmp.25 = mul %tmp.22 %tmp.24;
+        symbol [ toNumber %tmp.26 326 36 44 ];
+        %tmp.26 = getv function %tmp.25 :toNumber;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        invoke %tmp.20 %tmp.21(%tmp.27);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 327 8 ]
+        %tmp.28 = lgetv %dc;
+        symbol [ dc %tmp.28 327 8 10 ];
+        symbol [ drawArc %tmp.29 327 11 18 ];
+        %tmp.29 = getv function %tmp.28 :drawArc;
+        symbol [ centerX %tmp.31 327 19 26 ];
+        %tmp.31 = getv ? :centerX;
+        symbol [ centerY %tmp.33 327 28 35 ];
+        %tmp.33 = getv ? :centerY;
+        %tmp.34 = lgetv %radius.1;
+        symbol [ radius %tmp.34 327 37 43 ];
+        symbol [ Graphics %tmp.35 328 19 27 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ ARC_COUNTER_CLOCKWISE %tmp.36 328 28 49 ];
+        %tmp.36 = getv %tmp.35 :ARC_COUNTER_CLOCKWISE;
+        %tmp.37 = lgetv %startAngle.3;
+        symbol [ startAngle %tmp.37 329 19 29 ];
+        %tmp.38 = lgetv %endAngle.4;
+        symbol [ endAngle %tmp.38 329 31 39 ];
+        invoke %tmp.28 %tmp.29(%tmp.31, %tmp.33, %tmp.34, %tmp.36, %tmp.37, %tmp.38);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_319_31_330_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 333; @symbol_functiondef = [drawTime,333,13,21]; @symbol_param<0> = [dc,333,22,24]; ]
+    function drawTime(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_333_26_343_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 334 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_333_26_343_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_333_26_343_4_stop" ]
+        %clockTime.1 = local;
+        symbol [ clockTime %clockTime.1 334 12 21 ];
+        symbol [ System %tmp.1 334 24 30 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 334 31 43 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+        symbol [ clockTime %clockTime.1 334 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 335 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_333_26_343_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_333_26_343_4_stop" ]
+        %timeString.2 = local;
+        symbol [ timeString %timeString.2 335 12 22 ];
+        symbol [ Lang %tmp.4 335 25 29 ];
+        %tmp.4 = getm $.Toybox.Lang;
+        symbol [ format %tmp.5 335 30 36 ];
+        %tmp.5 = getv function %tmp.4 :format;
+        %tmp.6 = "$1$:$2$";
+        %tmp.7 = newa 2;
+        %tmp.8 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.8 336 12 21 ];
+        symbol [ hour %tmp.9 336 22 26 ];
+        %tmp.9 = getv %tmp.8 :hour;
+        symbol [ format %tmp.10 336 27 33 ];
+        %tmp.10 = getv function %tmp.9 :format;
+        %tmp.11 = "%02d";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        %tmp.13 = dup %tmp.7;
+        %tmp.14 = aputv %tmp.13 0 %tmp.12;
+        %tmp.15 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.15 337 12 21 ];
+        symbol [ min %tmp.16 337 22 25 ];
+        %tmp.16 = getv %tmp.15 :min;
+        symbol [ format %tmp.17 337 26 32 ];
+        %tmp.17 = getv function %tmp.16 :format;
+        %tmp.18 = "%02d";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        %tmp.22 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.21);
+        lputv %timeString.2 %tmp.22;
+        symbol [ timeString %timeString.2 335 12 22 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 340 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 340 8 10 ];
+        symbol [ setColor %tmp.24 340 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ RADAR_GREEN %tmp.26 340 20 31 ];
+        %tmp.26 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.27 340 33 41 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 340 42 59 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 341 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 341 8 10 ];
+        symbol [ drawText %tmp.30 341 11 19 ];
+        %tmp.30 = getv function %tmp.29 :drawText;
+        symbol [ centerX %tmp.32 341 20 27 ];
+        %tmp.32 = getv ? :centerX;
+        %tmp.33 = 75;
+        symbol [ scale %tmp.35 341 35 40 ];
+        %tmp.35 = getv ? :scale;
+        %tmp.36 = mul %tmp.33 %tmp.35;
+        symbol [ toNumber %tmp.37 341 42 50 ];
+        %tmp.37 = getv function %tmp.36 :toNumber;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        symbol [ orbitronTime %tmp.40 341 54 66 ];
+        %tmp.40 = getv ? :orbitronTime;
+        %tmp.41 = lgetv %timeString.2;
+        symbol [ timeString %tmp.41 341 68 78 ];
+        symbol [ Graphics %tmp.42 342 19 27 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.43 342 28 47 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.29 %tmp.30(%tmp.32, %tmp.38, %tmp.40, %tmp.41, %tmp.43);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_333_26_343_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 346; @symbol_functiondef = [drawDate,346,13,21]; @symbol_param<0> = [dc,346,22,24]; ]
+    function drawDate(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_346_26_357_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 347 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_346_26_357_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_346_26_357_4_stop" ]
+        %today.1 = local;
+        symbol [ today %today.1 347 12 17 ];
+        symbol [ Gregorian %tmp.1 347 20 29 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.2 347 30 34 ];
+        %tmp.2 = getv function %tmp.1 :info;
+        symbol [ Time %tmp.3 347 35 39 ];
+        %tmp.3 = getm $.Toybox.Time;
+        symbol [ now %tmp.4 347 40 43 ];
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ Time %tmp.6 347 47 51 ];
+        %tmp.6 = getm $.Toybox.Time;
+        symbol [ FORMAT_MEDIUM %tmp.7 347 52 65 ];
+        %tmp.7 = getv %tmp.6 :FORMAT_MEDIUM;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %today.1 %tmp.8;
+        symbol [ today %today.1 347 12 17 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 348 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_346_26_357_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_346_26_357_4_stop" ]
+        %dateString.2 = local;
+        symbol [ dateString %dateString.2 348 12 22 ];
+        symbol [ Lang %tmp.9 348 25 29 ];
+        %tmp.9 = getm $.Toybox.Lang;
+        symbol [ format %tmp.10 348 30 36 ];
+        %tmp.10 = getv function %tmp.9 :format;
+        %tmp.11 = "$1$ $2$.$3$";
+        %tmp.12 = newa 3;
+        %tmp.13 = lgetv %today.1;
+        symbol [ today %tmp.13 349 12 17 ];
+        symbol [ day_of_week %tmp.14 349 18 29 ];
+        %tmp.14 = getv %tmp.13 :day_of_week;
+        symbol [ toUpper %tmp.15 349 30 37 ];
+        %tmp.15 = getv function %tmp.14 :toUpper;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        symbol [ substring %tmp.17 349 40 49 ];
+        %tmp.17 = getv function %tmp.16 :substring;
+        %tmp.18 = 0;
+        %tmp.19 = 3;
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19);
+        %tmp.21 = dup %tmp.12;
+        %tmp.22 = aputv %tmp.21 0 %tmp.20;
+        %tmp.23 = lgetv %today.1;
+        symbol [ today %tmp.23 350 12 17 ];
+        symbol [ day %tmp.24 350 18 21 ];
+        %tmp.24 = getv %tmp.23 :day;
+        symbol [ format %tmp.25 350 22 28 ];
+        %tmp.25 = getv function %tmp.24 :format;
+        %tmp.26 = "%02d";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        %tmp.28 = dup %tmp.22;
+        %tmp.29 = aputv %tmp.28 1 %tmp.27;
+        %tmp.30 = lgetv %today.1;
+        symbol [ today %tmp.30 351 12 17 ];
+        symbol [ month %tmp.31 351 18 23 ];
+        %tmp.31 = getv %tmp.30 :month;
+        symbol [ toUpper %tmp.32 351 24 31 ];
+        %tmp.32 = getv function %tmp.31 :toUpper;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        symbol [ substring %tmp.34 351 34 43 ];
+        %tmp.34 = getv function %tmp.33 :substring;
+        %tmp.35 = 0;
+        %tmp.36 = 3;
+        %tmp.37 = invoke %tmp.33 %tmp.34(%tmp.35, %tmp.36);
+        %tmp.38 = dup %tmp.29;
+        %tmp.39 = aputv %tmp.38 2 %tmp.37;
+        %tmp.40 = invoke %tmp.9 %tmp.10(%tmp.11, %tmp.39);
+        lputv %dateString.2 %tmp.40;
+        symbol [ dateString %dateString.2 348 12 22 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 354 8 ]
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 354 8 10 ];
+        symbol [ setColor %tmp.42 354 11 19 ];
+        %tmp.42 = getv function %tmp.41 :setColor;
+        symbol [ RADAR_GREEN %tmp.44 354 20 31 ];
+        %tmp.44 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.45 354 33 41 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.46 354 42 59 ];
+        %tmp.46 = getv %tmp.45 :COLOR_TRANSPARENT;
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 355 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 355 8 10 ];
+        symbol [ drawText %tmp.48 355 11 19 ];
+        %tmp.48 = getv function %tmp.47 :drawText;
+        symbol [ centerX %tmp.50 355 20 27 ];
+        %tmp.50 = getv ? :centerX;
+        %tmp.51 = 118;
+        symbol [ scale %tmp.53 355 36 41 ];
+        %tmp.53 = getv ? :scale;
+        %tmp.54 = mul %tmp.51 %tmp.53;
+        symbol [ toNumber %tmp.55 355 43 51 ];
+        %tmp.55 = getv function %tmp.54 :toNumber;
+        %tmp.56 = invoke %tmp.54 %tmp.55();
+        symbol [ orbitronSmall %tmp.58 355 55 68 ];
+        %tmp.58 = getv ? :orbitronSmall;
+        %tmp.59 = lgetv %dateString.2;
+        symbol [ dateString %tmp.59 355 70 80 ];
+        symbol [ Graphics %tmp.60 356 19 27 ];
+        %tmp.60 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.61 356 28 47 ];
+        %tmp.61 = getv %tmp.60 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.56, %tmp.58, %tmp.59, %tmp.61);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_346_26_357_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 360; @symbol_functiondef = [drawSeconds,360,13,24]; @symbol_param<0> = [dc,360,25,27]; ]
+    function drawSeconds(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_360_29_373_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 361 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_360_29_373_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_360_29_373_4_stop" ]
+        %clockTime.1 = local;
+        symbol [ clockTime %clockTime.1 361 12 21 ];
+        symbol [ System %tmp.1 361 24 30 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 361 31 43 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %clockTime.1 %tmp.3;
+        symbol [ clockTime %clockTime.1 361 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 362 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_360_29_373_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_360_29_373_4_stop" ]
+        %secString.2 = local;
+        symbol [ secString %secString.2 362 12 21 ];
+        %tmp.4 = ":";
+        %tmp.5 = lgetv %clockTime.1;
+        symbol [ clockTime %tmp.5 362 30 39 ];
+        symbol [ sec %tmp.6 362 40 43 ];
+        %tmp.6 = getv %tmp.5 :sec;
+        symbol [ format %tmp.7 362 44 50 ];
+        %tmp.7 = getv function %tmp.6 :format;
+        %tmp.8 = "%02d";
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        %tmp.10 = add %tmp.4 %tmp.9;
+        lputv %secString.2 %tmp.10;
+        symbol [ secString %secString.2 362 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 365 8 ]
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 365 8 10 ];
+        symbol [ setColor %tmp.12 365 11 19 ];
+        %tmp.12 = getv function %tmp.11 :setColor;
+        symbol [ RADAR_GREEN %tmp.14 365 20 31 ];
+        %tmp.14 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.15 365 33 41 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.16 365 42 59 ];
+        %tmp.16 = getv %tmp.15 :COLOR_TRANSPARENT;
+        invoke %tmp.11 %tmp.12(%tmp.14, %tmp.16);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 366 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 366 8 10 ];
+        symbol [ setPenWidth %tmp.18 366 11 22 ];
+        %tmp.18 = getv function %tmp.17 :setPenWidth;
+        %tmp.19 = 1;
+        invoke %tmp.17 %tmp.18(%tmp.19);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 367 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 367 8 10 ];
+        symbol [ drawRoundedRectangle %tmp.21 367 11 31 ];
+        %tmp.21 = getv function %tmp.20 :drawRoundedRectangle;
+        symbol [ centerX %tmp.23 367 33 40 ];
+        %tmp.23 = getv ? :centerX;
+        %tmp.24 = 15;
+        symbol [ scale %tmp.26 367 46 51 ];
+        %tmp.26 = getv ? :scale;
+        %tmp.27 = mul %tmp.24 %tmp.26;
+        %tmp.28 = sub %tmp.23 %tmp.27;
+        symbol [ toNumber %tmp.29 367 53 61 ];
+        %tmp.29 = getv function %tmp.28 :toNumber;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = 134;
+        symbol [ scale %tmp.33 367 70 75 ];
+        %tmp.33 = getv ? :scale;
+        %tmp.34 = mul %tmp.31 %tmp.33;
+        symbol [ toNumber %tmp.35 367 77 85 ];
+        %tmp.35 = getv function %tmp.34 :toNumber;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        %tmp.37 = 30;
+        symbol [ scale %tmp.39 368 35 40 ];
+        %tmp.39 = getv ? :scale;
+        %tmp.40 = mul %tmp.37 %tmp.39;
+        symbol [ toNumber %tmp.41 368 42 50 ];
+        %tmp.41 = getv function %tmp.40 :toNumber;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = 12;
+        symbol [ scale %tmp.45 368 58 63 ];
+        %tmp.45 = getv ? :scale;
+        %tmp.46 = mul %tmp.43 %tmp.45;
+        symbol [ toNumber %tmp.47 368 65 73 ];
+        %tmp.47 = getv function %tmp.46 :toNumber;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        %tmp.49 = 2;
+        symbol [ scale %tmp.51 368 80 85 ];
+        %tmp.51 = getv ? :scale;
+        %tmp.52 = mul %tmp.49 %tmp.51;
+        symbol [ toNumber %tmp.53 368 87 95 ];
+        %tmp.53 = getv function %tmp.52 :toNumber;
+        %tmp.54 = invoke %tmp.52 %tmp.53();
+        invoke %tmp.20 %tmp.21(%tmp.30, %tmp.36, %tmp.42, %tmp.48, %tmp.54);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 371 8 ]
+        %tmp.55 = lgetv %dc;
+        symbol [ dc %tmp.55 371 8 10 ];
+        symbol [ drawText %tmp.56 371 11 19 ];
+        %tmp.56 = getv function %tmp.55 :drawText;
+        symbol [ centerX %tmp.58 371 20 27 ];
+        %tmp.58 = getv ? :centerX;
+        %tmp.59 = 136;
+        symbol [ scale %tmp.61 371 36 41 ];
+        %tmp.61 = getv ? :scale;
+        %tmp.62 = mul %tmp.59 %tmp.61;
+        symbol [ toNumber %tmp.63 371 43 51 ];
+        %tmp.63 = getv function %tmp.62 :toNumber;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        symbol [ orbitronSmall %tmp.66 371 55 68 ];
+        %tmp.66 = getv ? :orbitronSmall;
+        %tmp.67 = lgetv %secString.2;
+        symbol [ secString %tmp.67 371 70 79 ];
+        symbol [ Graphics %tmp.68 372 19 27 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.69 372 28 47 ];
+        %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.55 %tmp.56(%tmp.58, %tmp.64, %tmp.66, %tmp.67, %tmp.69);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_360_29_373_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 376; @symbol_functiondef = [drawAllBlips,376,13,25]; @symbol_param<0> = [dc,376,26,28]; ]
+    function drawAllBlips(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 378 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %hrPos.1 = local;
+        symbol [ hrPos %hrPos.1 378 12 17 ];
+        %tmp.1 = self;
+        symbol [ getCircularPosition %tmp.2 378 20 39 ];
+        %tmp.2 = getv function %tmp.1 :getCircularPosition;
+        %tmp.3 = 305;
+        %tmp.4 = 85;
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4);
+        lputv %hrPos.1 %tmp.5;
+        symbol [ hrPos %hrPos.1 378 12 17 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 379 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %hr.2 = local;
+        symbol [ hr %hr.2 379 12 14 ];
+        %tmp.6 = self;
+        symbol [ getCurrentHeartRate %tmp.7 379 17 36 ];
+        %tmp.7 = getv function %tmp.6 :getCurrentHeartRate;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %hr.2 %tmp.8;
+        symbol [ hr %hr.2 379 12 14 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 380 8 ]
+        %tmp.9 = self;
+        symbol [ drawBlip %tmp.10 380 8 16 ];
+        %tmp.10 = getv function %tmp.9 :drawBlip;
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 380 17 19 ];
+        %tmp.12 = lgetv %hrPos.1;
+        symbol [ hrPos %tmp.12 380 21 26 ];
+        %tmp.13 = 0;
+        %tmp.14 = agetv %tmp.12 %tmp.13;
+        %tmp.15 = lgetv %hrPos.1;
+        symbol [ hrPos %tmp.15 380 31 36 ];
+        %tmp.16 = 1;
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = "HR";
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_begin:
+        %tmp.19 = lgetv %hr.2;
+        symbol [ hr %tmp.19 380 47 49 ];
+        %tmp.20 = null;
+        %tmp.21 = ne %tmp.19 %tmp.20;
+        bf %tmp.21 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_false;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_true:
+        %tmp.22 = lgetv %hr.2;
+        symbol [ hr %tmp.22 380 60 62 ];
+        %tmp.23 = as %tmp.22 { (!Null) };
+        symbol [ toString %tmp.24 380 63 71 ];
+        %tmp.24 = getv function %tmp.23 :toString;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        push %tmp.25;
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_false:
+        %tmp.26 = "--";
+        push %tmp.26;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_end:
+        %tmp.27 = phi [%tmp.21 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_begin] [%tmp.25 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_true] [%tmp.26 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_false] [%tmp.27 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_380_47_380_76_end];
+        %tmp.28 = 0;
+        invoke %tmp.9 %tmp.10(%tmp.11, %tmp.14, %tmp.17, %tmp.18, %tmp.27, %tmp.28);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 383 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %stepsPos.3 = local;
+        symbol [ stepsPos %stepsPos.3 383 12 20 ];
+        %tmp.29 = self;
+        symbol [ getCircularPosition %tmp.30 383 23 42 ];
+        %tmp.30 = getv function %tmp.29 :getCircularPosition;
+        %tmp.31 = 55;
+        %tmp.32 = 85;
+        %tmp.33 = invoke %tmp.29 %tmp.30(%tmp.31, %tmp.32);
+        lputv %stepsPos.3 %tmp.33;
+        symbol [ stepsPos %stepsPos.3 383 12 20 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 384 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %info.4 = local;
+        symbol [ info %info.4 384 12 16 ];
+        symbol [ ActivityMonitor %tmp.34 384 19 34 ];
+        %tmp.34 = getm $.Toybox.ActivityMonitor;
+        symbol [ getInfo %tmp.35 384 35 42 ];
+        %tmp.35 = getv function %tmp.34 :getInfo;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        lputv %info.4 %tmp.36;
+        symbol [ info %info.4 384 12 16 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 385 8 ]
+        %tmp.37 = self;
+        symbol [ drawBlip %tmp.38 385 8 16 ];
+        %tmp.38 = getv function %tmp.37 :drawBlip;
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 385 17 19 ];
+        %tmp.40 = lgetv %stepsPos.3;
+        symbol [ stepsPos %tmp.40 385 21 29 ];
+        %tmp.41 = 0;
+        %tmp.42 = agetv %tmp.40 %tmp.41;
+        %tmp.43 = lgetv %stepsPos.3;
+        symbol [ stepsPos %tmp.43 385 34 42 ];
+        %tmp.44 = 1;
+        %tmp.45 = agetv %tmp.43 %tmp.44;
+        %tmp.46 = "STEPS";
+        %tmp.47 = lgetv %info.4;
+        symbol [ info %tmp.47 385 56 60 ];
+        symbol [ steps %tmp.48 385 61 66 ];
+        %tmp.48 = getv %tmp.47 :steps;
+        symbol [ toString %tmp.49 385 67 75 ];
+        %tmp.49 = getv function %tmp.48 :toString;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        %tmp.51 = 0.33;
+        invoke %tmp.37 %tmp.38(%tmp.39, %tmp.42, %tmp.45, %tmp.46, %tmp.50, %tmp.51);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 388 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %batPos.5 = local;
+        symbol [ batPos %batPos.5 388 12 18 ];
+        %tmp.52 = self;
+        symbol [ getCircularPosition %tmp.53 388 21 40 ];
+        %tmp.53 = getv function %tmp.52 :getCircularPosition;
+        %tmp.54 = 180;
+        %tmp.55 = 70;
+        %tmp.56 = invoke %tmp.52 %tmp.53(%tmp.54, %tmp.55);
+        lputv %batPos.5 %tmp.56;
+        symbol [ batPos %batPos.5 388 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 389 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %stats.6 = local;
+        symbol [ stats %stats.6 389 12 17 ];
+        symbol [ System %tmp.57 389 20 26 ];
+        %tmp.57 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.58 389 27 41 ];
+        %tmp.58 = getv function %tmp.57 :getSystemStats;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        lputv %stats.6 %tmp.59;
+        symbol [ stats %stats.6 389 12 17 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 390 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop" ]
+        %batString.7 = local;
+        symbol [ batString %batString.7 390 12 21 ];
+        %tmp.60 = lgetv %stats.6;
+        symbol [ stats %tmp.60 390 24 29 ];
+        symbol [ battery %tmp.61 390 30 37 ];
+        %tmp.61 = getv %tmp.60 :battery;
+        symbol [ toNumber %tmp.62 390 38 46 ];
+        %tmp.62 = getv function %tmp.61 :toNumber;
+        %tmp.63 = invoke %tmp.61 %tmp.62();
+        %tmp.64 = "%";
+        %tmp.65 = add %tmp.63 %tmp.64;
+        lputv %batString.7 %tmp.65;
+        symbol [ batString %batString.7 390 12 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 391 8 ]
+        %tmp.66 = self;
+        symbol [ drawBlip %tmp.67 391 8 16 ];
+        %tmp.67 = getv function %tmp.66 :drawBlip;
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 391 17 19 ];
+        %tmp.69 = lgetv %batPos.5;
+        symbol [ batPos %tmp.69 391 21 27 ];
+        %tmp.70 = 0;
+        %tmp.71 = agetv %tmp.69 %tmp.70;
+        %tmp.72 = lgetv %batPos.5;
+        symbol [ batPos %tmp.72 391 32 38 ];
+        %tmp.73 = 1;
+        %tmp.74 = agetv %tmp.72 %tmp.73;
+        %tmp.75 = "PWR";
+        %tmp.76 = lgetv %batString.7;
+        symbol [ batString %tmp.76 391 50 59 ];
+        %tmp.77 = 0.66;
+        invoke %tmp.66 %tmp.67(%tmp.68, %tmp.71, %tmp.74, %tmp.75, %tmp.76, %tmp.77);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_376_30_392_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 395; @symbol_functiondef = [getCircularPosition,395,13,32]; @symbol_param<0> = [angle,395,33,38]; @symbol_param<1> = [radius,395,40,46]; ]
+    function getCircularPosition(angle, radius) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 396 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_stop" ]
+        %radians.1 = local;
+        symbol [ radians %radians.1 396 12 19 ];
+        symbol [ Math %tmp.1 396 22 26 ];
+        %tmp.1 = getm $.Toybox.Math;
+        symbol [ toRadians %tmp.2 396 27 36 ];
+        %tmp.2 = getv function %tmp.1 :toRadians;
+        %tmp.3 = lgetv %angle;
+        symbol [ angle %tmp.3 396 37 42 ];
+        %tmp.4 = 90;
+        %tmp.5 = sub %tmp.3 %tmp.4;
+        %tmp.6 = invoke %tmp.1 %tmp.2(%tmp.5);
+        lputv %radians.1 %tmp.6;
+        symbol [ radians %radians.1 396 12 19 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 397 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_stop" ]
+        %x.2 = local;
+        symbol [ x %x.2 397 12 13 ];
+        symbol [ centerX %tmp.8 397 17 24 ];
+        %tmp.8 = getv ? :centerX;
+        %tmp.9 = lgetv %radius;
+        symbol [ radius %tmp.9 397 27 33 ];
+        symbol [ scale %tmp.11 397 36 41 ];
+        %tmp.11 = getv ? :scale;
+        %tmp.12 = mul %tmp.9 %tmp.11;
+        symbol [ Math %tmp.13 397 44 48 ];
+        %tmp.13 = getm $.Toybox.Math;
+        symbol [ cos %tmp.14 397 49 52 ];
+        %tmp.14 = getv function %tmp.13 :cos;
+        %tmp.15 = lgetv %radians.1;
+        symbol [ radians %tmp.15 397 53 60 ];
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        %tmp.17 = mul %tmp.12 %tmp.16;
+        %tmp.18 = add %tmp.8 %tmp.17;
+        symbol [ toNumber %tmp.19 397 63 71 ];
+        %tmp.19 = getv function %tmp.18 :toNumber;
+        %tmp.20 = invoke %tmp.18 %tmp.19();
+        lputv %x.2 %tmp.20;
+        symbol [ x %x.2 397 12 13 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 398 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_stop" ]
+        %y.3 = local;
+        symbol [ y %y.3 398 12 13 ];
+        symbol [ centerY %tmp.22 398 17 24 ];
+        %tmp.22 = getv ? :centerY;
+        %tmp.23 = lgetv %radius;
+        symbol [ radius %tmp.23 398 27 33 ];
+        symbol [ scale %tmp.25 398 36 41 ];
+        %tmp.25 = getv ? :scale;
+        %tmp.26 = mul %tmp.23 %tmp.25;
+        symbol [ Math %tmp.27 398 44 48 ];
+        %tmp.27 = getm $.Toybox.Math;
+        symbol [ sin %tmp.28 398 49 52 ];
+        %tmp.28 = getv function %tmp.27 :sin;
+        %tmp.29 = lgetv %radians.1;
+        symbol [ radians %tmp.29 398 53 60 ];
+        %tmp.30 = invoke %tmp.27 %tmp.28(%tmp.29);
+        %tmp.31 = mul %tmp.26 %tmp.30;
+        %tmp.32 = add %tmp.22 %tmp.31;
+        symbol [ toNumber %tmp.33 398 63 71 ];
+        %tmp.33 = getv function %tmp.32 :toNumber;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        lputv %y.3 %tmp.34;
+        symbol [ y %y.3 398 12 13 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 399 8 ]
+        %tmp.35 = newa 2;
+        %tmp.36 = lgetv %x.2;
+        symbol [ x %tmp.36 399 16 17 ];
+        %tmp.37 = dup %tmp.35;
+        %tmp.38 = aputv %tmp.37 0 %tmp.36;
+        %tmp.39 = lgetv %y.3;
+        symbol [ y %tmp.39 399 19 20 ];
+        %tmp.40 = dup %tmp.38;
+        %tmp.41 = aputv %tmp.40 1 %tmp.39;
+        ret %tmp.41;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_395_48_400_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 403; @symbol_functiondef = [drawBlip,403,13,21]; @symbol_param<0> = [dc,403,22,24]; @symbol_param<1> = [x,403,26,27]; @symbol_param<2> = [y,403,29,30]; @symbol_param<3> = [label,403,32,37]; @symbol_param<4> = [value,403,39,44]; @symbol_param<5> = [phase,403,46,51]; ]
+    function drawBlip(dc, x, y, label, value, phase) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_403_53_424_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 405 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_403_53_424_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_403_53_424_4_stop" ]
+        %pulse.1 = local;
+        symbol [ pulse %pulse.1 405 12 17 ];
+        symbol [ Math %tmp.1 405 20 24 ];
+        %tmp.1 = getm $.Toybox.Math;
+        symbol [ sin %tmp.2 405 25 28 ];
+        %tmp.2 = getv function %tmp.1 :sin;
+        symbol [ updateCounter %tmp.4 405 30 43 ];
+        %tmp.4 = getv ? :updateCounter;
+        %tmp.5 = lgetv %phase;
+        symbol [ phase %tmp.5 405 46 51 ];
+        %tmp.6 = 3;
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        %tmp.8 = add %tmp.4 %tmp.7;
+        symbol [ Math %tmp.9 405 59 63 ];
+        %tmp.9 = getm $.Toybox.Math;
+        symbol [ PI %tmp.10 405 64 66 ];
+        %tmp.10 = getv %tmp.9 :PI;
+        %tmp.11 = mul %tmp.8 %tmp.10;
+        %tmp.12 = 3;
+        %tmp.13 = div %tmp.11 %tmp.12;
+        %tmp.14 = invoke %tmp.1 %tmp.2(%tmp.13);
+        lputv %pulse.1 %tmp.14;
+        symbol [ pulse %pulse.1 405 12 17 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 406 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_403_53_424_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_403_53_424_4_stop" ]
+        %radius.2 = local;
+        symbol [ radius %radius.2 406 12 18 ];
+        %tmp.15 = 2;
+        %tmp.16 = lgetv %pulse.1;
+        symbol [ pulse %tmp.16 406 27 32 ];
+        %tmp.17 = 4;
+        %tmp.18 = mul %tmp.16 %tmp.17;
+        %tmp.19 = add %tmp.15 %tmp.18;
+        symbol [ scale %tmp.21 406 40 45 ];
+        %tmp.21 = getv ? :scale;
+        %tmp.22 = mul %tmp.19 %tmp.21;
+        symbol [ toNumber %tmp.23 406 47 55 ];
+        %tmp.23 = getv function %tmp.22 :toNumber;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        lputv %radius.2 %tmp.24;
+        symbol [ radius %radius.2 406 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 409 8 ]
+        %tmp.25 = lgetv %dc;
+        symbol [ dc %tmp.25 409 8 10 ];
+        symbol [ setColor %tmp.26 409 11 19 ];
+        %tmp.26 = getv function %tmp.25 :setColor;
+        symbol [ RADAR_GREEN %tmp.28 409 20 31 ];
+        %tmp.28 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.29 409 33 41 ];
+        %tmp.29 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.30 409 42 59 ];
+        %tmp.30 = getv %tmp.29 :COLOR_TRANSPARENT;
+        invoke %tmp.25 %tmp.26(%tmp.28, %tmp.30);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 410 8 ]
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 410 8 10 ];
+        symbol [ fillCircle %tmp.32 410 11 21 ];
+        %tmp.32 = getv function %tmp.31 :fillCircle;
+        %tmp.33 = lgetv %x;
+        symbol [ x %tmp.33 410 22 23 ];
+        %tmp.34 = lgetv %y;
+        symbol [ y %tmp.34 410 25 26 ];
+        %tmp.35 = 8;
+        symbol [ scale %tmp.37 410 33 38 ];
+        %tmp.37 = getv ? :scale;
+        %tmp.38 = mul %tmp.35 %tmp.37;
+        symbol [ toNumber %tmp.39 410 40 48 ];
+        %tmp.39 = getv function %tmp.38 :toNumber;
+        %tmp.40 = invoke %tmp.38 %tmp.39();
+        invoke %tmp.31 %tmp.32(%tmp.33, %tmp.34, %tmp.40);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 411 8 ]
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 411 8 10 ];
+        symbol [ fillCircle %tmp.42 411 11 21 ];
+        %tmp.42 = getv function %tmp.41 :fillCircle;
+        %tmp.43 = lgetv %x;
+        symbol [ x %tmp.43 411 22 23 ];
+        %tmp.44 = lgetv %y;
+        symbol [ y %tmp.44 411 25 26 ];
+        %tmp.45 = 5;
+        symbol [ scale %tmp.47 411 33 38 ];
+        %tmp.47 = getv ? :scale;
+        %tmp.48 = mul %tmp.45 %tmp.47;
+        symbol [ toNumber %tmp.49 411 40 48 ];
+        %tmp.49 = getv function %tmp.48 :toNumber;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        invoke %tmp.41 %tmp.42(%tmp.43, %tmp.44, %tmp.50);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 412 8 ]
+        %tmp.51 = lgetv %dc;
+        symbol [ dc %tmp.51 412 8 10 ];
+        symbol [ fillCircle %tmp.52 412 11 21 ];
+        %tmp.52 = getv function %tmp.51 :fillCircle;
+        %tmp.53 = lgetv %x;
+        symbol [ x %tmp.53 412 22 23 ];
+        %tmp.54 = lgetv %y;
+        symbol [ y %tmp.54 412 25 26 ];
+        %tmp.55 = lgetv %radius.2;
+        symbol [ radius %tmp.55 412 28 34 ];
+        invoke %tmp.51 %tmp.52(%tmp.53, %tmp.54, %tmp.55);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 415 8 ]
+        %tmp.56 = self;
+        symbol [ drawCrosshair %tmp.57 415 8 21 ];
+        %tmp.57 = getv function %tmp.56 :drawCrosshair;
+        %tmp.58 = lgetv %dc;
+        symbol [ dc %tmp.58 415 22 24 ];
+        %tmp.59 = lgetv %x;
+        symbol [ x %tmp.59 415 26 27 ];
+        %tmp.60 = lgetv %y;
+        symbol [ y %tmp.60 415 29 30 ];
+        invoke %tmp.56 %tmp.57(%tmp.58, %tmp.59, %tmp.60);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 418 8 ]
+        %tmp.61 = lgetv %dc;
+        symbol [ dc %tmp.61 418 8 10 ];
+        symbol [ drawText %tmp.62 418 11 19 ];
+        %tmp.62 = getv function %tmp.61 :drawText;
+        %tmp.63 = lgetv %x;
+        symbol [ x %tmp.63 418 20 21 ];
+        %tmp.64 = lgetv %y;
+        symbol [ y %tmp.64 418 24 25 ];
+        %tmp.65 = 20;
+        symbol [ scale %tmp.67 418 31 36 ];
+        %tmp.67 = getv ? :scale;
+        %tmp.68 = mul %tmp.65 %tmp.67;
+        %tmp.69 = sub %tmp.64 %tmp.68;
+        symbol [ toNumber %tmp.70 418 38 46 ];
+        %tmp.70 = getv function %tmp.69 :toNumber;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        symbol [ orbitronSmall %tmp.73 418 50 63 ];
+        %tmp.73 = getv ? :orbitronSmall;
+        %tmp.74 = lgetv %label;
+        symbol [ label %tmp.74 418 65 70 ];
+        symbol [ Graphics %tmp.75 419 19 27 ];
+        %tmp.75 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.76 419 28 47 ];
+        %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.71, %tmp.73, %tmp.74, %tmp.76);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 422 8 ]
+        %tmp.77 = lgetv %dc;
+        symbol [ dc %tmp.77 422 8 10 ];
+        symbol [ drawText %tmp.78 422 11 19 ];
+        %tmp.78 = getv function %tmp.77 :drawText;
+        %tmp.79 = lgetv %x;
+        symbol [ x %tmp.79 422 20 21 ];
+        %tmp.80 = lgetv %y;
+        symbol [ y %tmp.80 422 24 25 ];
+        %tmp.81 = 12;
+        symbol [ scale %tmp.83 422 31 36 ];
+        %tmp.83 = getv ? :scale;
+        %tmp.84 = mul %tmp.81 %tmp.83;
+        %tmp.85 = add %tmp.80 %tmp.84;
+        symbol [ toNumber %tmp.86 422 38 46 ];
+        %tmp.86 = getv function %tmp.85 :toNumber;
+        %tmp.87 = invoke %tmp.85 %tmp.86();
+        symbol [ orbitronSmall %tmp.89 422 50 63 ];
+        %tmp.89 = getv ? :orbitronSmall;
+        %tmp.90 = lgetv %value;
+        symbol [ value %tmp.90 422 65 70 ];
+        symbol [ Graphics %tmp.91 423 19 27 ];
+        %tmp.91 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.92 423 28 47 ];
+        %tmp.92 = getv %tmp.91 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.77 %tmp.78(%tmp.79, %tmp.87, %tmp.89, %tmp.90, %tmp.92);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_403_53_424_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 427; @symbol_functiondef = [drawCrosshair,427,13,26]; @symbol_param<0> = [dc,427,27,29]; @symbol_param<1> = [x,427,31,32]; @symbol_param<2> = [y,427,34,35]; ]
+    function drawCrosshair(dc, x, y) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_427_37_438_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 428 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_427_37_438_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_427_37_438_4_stop" ]
+        %size.1 = local;
+        symbol [ size %size.1 428 12 16 ];
+        %tmp.1 = 12;
+        symbol [ scale %tmp.3 428 25 30 ];
+        %tmp.3 = getv ? :scale;
+        %tmp.4 = mul %tmp.1 %tmp.3;
+        symbol [ toNumber %tmp.5 428 32 40 ];
+        %tmp.5 = getv function %tmp.4 :toNumber;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %size.1 %tmp.6;
+        symbol [ size %size.1 428 12 16 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 429 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_427_37_438_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_427_37_438_4_stop" ]
+        %gap.2 = local;
+        symbol [ gap %gap.2 429 12 15 ];
+        %tmp.7 = 8;
+        symbol [ scale %tmp.9 429 23 28 ];
+        %tmp.9 = getv ? :scale;
+        %tmp.10 = mul %tmp.7 %tmp.9;
+        symbol [ toNumber %tmp.11 429 30 38 ];
+        %tmp.11 = getv function %tmp.10 :toNumber;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %gap.2 %tmp.12;
+        symbol [ gap %gap.2 429 12 15 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 431 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 431 8 10 ];
+        symbol [ setColor %tmp.14 431 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        symbol [ RADAR_GREEN %tmp.16 431 20 31 ];
+        %tmp.16 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.17 431 33 41 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.18 431 42 59 ];
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 432 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 432 8 10 ];
+        symbol [ setPenWidth %tmp.20 432 11 22 ];
+        %tmp.20 = getv function %tmp.19 :setPenWidth;
+        %tmp.21 = 1;
+        invoke %tmp.19 %tmp.20(%tmp.21);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 434 8 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 434 8 10 ];
+        symbol [ drawLine %tmp.23 434 11 19 ];
+        %tmp.23 = getv function %tmp.22 :drawLine;
+        %tmp.24 = lgetv %x;
+        symbol [ x %tmp.24 434 20 21 ];
+        %tmp.25 = lgetv %size.1;
+        symbol [ size %tmp.25 434 24 28 ];
+        %tmp.26 = sub %tmp.24 %tmp.25;
+        %tmp.27 = lgetv %y;
+        symbol [ y %tmp.27 434 30 31 ];
+        %tmp.28 = lgetv %x;
+        symbol [ x %tmp.28 434 33 34 ];
+        %tmp.29 = lgetv %gap.2;
+        symbol [ gap %tmp.29 434 37 40 ];
+        %tmp.30 = sub %tmp.28 %tmp.29;
+        %tmp.31 = lgetv %y;
+        symbol [ y %tmp.31 434 42 43 ];
+        invoke %tmp.22 %tmp.23(%tmp.26, %tmp.27, %tmp.30, %tmp.31);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 435 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 435 8 10 ];
+        symbol [ drawLine %tmp.33 435 11 19 ];
+        %tmp.33 = getv function %tmp.32 :drawLine;
+        %tmp.34 = lgetv %x;
+        symbol [ x %tmp.34 435 20 21 ];
+        %tmp.35 = lgetv %gap.2;
+        symbol [ gap %tmp.35 435 24 27 ];
+        %tmp.36 = add %tmp.34 %tmp.35;
+        %tmp.37 = lgetv %y;
+        symbol [ y %tmp.37 435 29 30 ];
+        %tmp.38 = lgetv %x;
+        symbol [ x %tmp.38 435 32 33 ];
+        %tmp.39 = lgetv %size.1;
+        symbol [ size %tmp.39 435 36 40 ];
+        %tmp.40 = add %tmp.38 %tmp.39;
+        %tmp.41 = lgetv %y;
+        symbol [ y %tmp.41 435 42 43 ];
+        invoke %tmp.32 %tmp.33(%tmp.36, %tmp.37, %tmp.40, %tmp.41);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 436 8 ]
+        %tmp.42 = lgetv %dc;
+        symbol [ dc %tmp.42 436 8 10 ];
+        symbol [ drawLine %tmp.43 436 11 19 ];
+        %tmp.43 = getv function %tmp.42 :drawLine;
+        %tmp.44 = lgetv %x;
+        symbol [ x %tmp.44 436 20 21 ];
+        %tmp.45 = lgetv %y;
+        symbol [ y %tmp.45 436 23 24 ];
+        %tmp.46 = lgetv %size.1;
+        symbol [ size %tmp.46 436 27 31 ];
+        %tmp.47 = sub %tmp.45 %tmp.46;
+        %tmp.48 = lgetv %x;
+        symbol [ x %tmp.48 436 33 34 ];
+        %tmp.49 = lgetv %y;
+        symbol [ y %tmp.49 436 36 37 ];
+        %tmp.50 = lgetv %gap.2;
+        symbol [ gap %tmp.50 436 40 43 ];
+        %tmp.51 = sub %tmp.49 %tmp.50;
+        invoke %tmp.42 %tmp.43(%tmp.44, %tmp.47, %tmp.48, %tmp.51);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 437 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 437 8 10 ];
+        symbol [ drawLine %tmp.53 437 11 19 ];
+        %tmp.53 = getv function %tmp.52 :drawLine;
+        %tmp.54 = lgetv %x;
+        symbol [ x %tmp.54 437 20 21 ];
+        %tmp.55 = lgetv %y;
+        symbol [ y %tmp.55 437 23 24 ];
+        %tmp.56 = lgetv %gap.2;
+        symbol [ gap %tmp.56 437 27 30 ];
+        %tmp.57 = add %tmp.55 %tmp.56;
+        %tmp.58 = lgetv %x;
+        symbol [ x %tmp.58 437 32 33 ];
+        %tmp.59 = lgetv %y;
+        symbol [ y %tmp.59 437 35 36 ];
+        %tmp.60 = lgetv %size.1;
+        symbol [ size %tmp.60 437 39 43 ];
+        %tmp.61 = add %tmp.59 %tmp.60;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.57, %tmp.58, %tmp.61);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_427_37_438_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 441; @symbol_functiondef = [drawStatusIndicators,441,13,33]; @symbol_param<0> = [dc,441,34,36]; ]
+    function drawStatusIndicators(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_441_38_447_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 442 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 442 8 10 ];
+        symbol [ setColor %tmp.2 442 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ RADAR_GREEN %tmp.4 442 20 31 ];
+        %tmp.4 = getv ? :RADAR_GREEN;
+        symbol [ Graphics %tmp.5 442 33 41 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 442 42 59 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 445 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 445 8 10 ];
+        symbol [ drawText %tmp.8 445 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        symbol [ centerX %tmp.10 445 20 27 ];
+        %tmp.10 = getv ? :centerX;
+        %tmp.11 = 25;
+        symbol [ scale %tmp.13 445 35 40 ];
+        %tmp.13 = getv ? :scale;
+        %tmp.14 = mul %tmp.11 %tmp.13;
+        symbol [ toNumber %tmp.15 445 42 50 ];
+        %tmp.15 = getv function %tmp.14 :toNumber;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        symbol [ orbitronSmall %tmp.18 445 54 67 ];
+        %tmp.18 = getv ? :orbitronSmall;
+        %tmp.19 = "SCAN";
+        symbol [ Graphics %tmp.20 446 19 27 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.21 446 28 47 ];
+        %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.16, %tmp.18, %tmp.19, %tmp.21);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_441_38_447_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 450; @symbol_functiondef = [updateTargets,450,13,26]; @symbol_param<0> = [currentSec,450,27,37]; ]
+    function updateTargets(currentSec) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_450_39_468_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 452 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_450_39_468_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_450_39_468_4_stop" ]
+        %newTargets.1 = local;
+        symbol [ newTargets %newTargets.1 452 12 22 ];
+        %tmp.1 = newa 0;
+        lputv %newTargets.1 %tmp.1;
+        symbol [ newTargets %newTargets.1 452 12 22 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 453 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_end" ]
+        %i.2 = local;
+        symbol [ i %i.2 453 17 18 ];
+        %tmp.2 = 0;
+        lputv %i.2 %tmp.2;
+        symbol [ i %i.2 453 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_test:
+        %tmp.3 = lgetv %i.2;
+        symbol [ i %tmp.3 453 24 25 ];
+        symbol [ targets %tmp.5 453 28 35 ];
+        %tmp.5 = getv ? :targets;
+        symbol [ size %tmp.6 453 36 40 ];
+        %tmp.6 = getv function %tmp.5 :size;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        %tmp.8 = lt %tmp.3 %tmp.7;
+        bf %tmp.8 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_49_459_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 454 12 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_49_459_8_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_49_459_8_stop" ]
+        %age.3 = local;
+        symbol [ age %age.3 454 16 19 ];
+        %tmp.9 = lgetv %currentSec;
+        symbol [ currentSec %tmp.9 454 22 32 ];
+        symbol [ targets %tmp.11 454 35 42 ];
+        %tmp.11 = getv ? :targets;
+        %tmp.12 = lgetv %i.2;
+        symbol [ i %tmp.12 454 43 44 ];
+        %tmp.13 = agetv %tmp.11 %tmp.12;
+        %tmp.14 = 2;
+        %tmp.15 = agetv %tmp.13 %tmp.14;
+        %tmp.16 = sub %tmp.9 %tmp.15;
+        lputv %age.3 %tmp.16;
+        symbol [ age %age.3 454 16 19 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 455 12 ]
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_12_455_38_if_stmt:
+        %tmp.17 = lgetv %age.3;
+        symbol [ age %tmp.17 455 16 19 ];
+        %tmp.18 = 0;
+        %tmp.19 = lt %tmp.17 %tmp.18;
+        bf %tmp.19 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_12_455_38_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_12_455_38_if_true:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_25_455_38_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 455 27 ]
+        %tmp.20 = lgetv %age.3;
+        symbol [ age %tmp.20 455 27 30 ];
+        %tmp.21 = 60;
+        %tmp.22 = add %tmp.20 %tmp.21;
+        lputv %age.3 %tmp.22;
+        symbol [ age %age.3 455 27 30 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_25_455_38_stop:
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_12_455_38_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_455_12_455_38_if_end:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 456 12 ]
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_12_458_12_if_stmt:
+        %tmp.23 = lgetv %age.3;
+        symbol [ age %tmp.23 456 16 19 ];
+        symbol [ TARGET_DURATION %tmp.25 456 22 37 ];
+        %tmp.25 = getv ? :TARGET_DURATION;
+        %tmp.26 = lt %tmp.23 %tmp.25;
+        bf %tmp.26 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_12_458_12_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_12_458_12_if_true:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_39_458_12_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 457 16 ]
+        %tmp.27 = lgetv %newTargets.1;
+        symbol [ newTargets %tmp.27 457 16 26 ];
+        symbol [ add %tmp.28 457 27 30 ];
+        %tmp.28 = getv function %tmp.27 :add;
+        symbol [ targets %tmp.30 457 31 38 ];
+        %tmp.30 = getv ? :targets;
+        %tmp.31 = lgetv %i.2;
+        symbol [ i %tmp.31 457 39 40 ];
+        %tmp.32 = agetv %tmp.30 %tmp.31;
+        invoke %tmp.27 %tmp.28(%tmp.32);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_39_458_12_stop:
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_12_458_12_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_456_12_458_12_if_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_49_459_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 453 ]
+        %tmp.35 = lgetv %i.2;
+        symbol [ i %tmp.35 453 44 45 ];
+        %tmp.36 = add %tmp.35 1;
+        lputv %i.2 %tmp.36;
+        symbol [ i %i.2 453 44 45 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_453_8_459_8_for_end:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 460 8 ]
+        %tmp.37 = lgetv %newTargets.1;
+        symbol [ newTargets %tmp.37 460 18 28 ];
+        symbol [ targets ? 460 8 15 ];
+        putv self :targets %tmp.37;
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 463 8 ]
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_8_467_8_if_stmt:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_12_463_63_begin:
+        symbol [ targets %tmp.39 463 12 19 ];
+        %tmp.39 = getv ? :targets;
+        symbol [ size %tmp.40 463 20 24 ];
+        %tmp.40 = getv function %tmp.39 :size;
+        %tmp.41 = invoke %tmp.39 %tmp.40();
+        symbol [ MAX_TARGETS %tmp.43 463 29 40 ];
+        %tmp.43 = getv ? :MAX_TARGETS;
+        %tmp.44 = lt %tmp.41 %tmp.43;
+        bf %tmp.44 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_8_467_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_44_463_63_true:
+        symbol [ Math %tmp.45 463 44 48 ];
+        %tmp.45 = getm $.Toybox.Math;
+        symbol [ rand %tmp.46 463 49 53 ];
+        %tmp.46 = getv function %tmp.45 :rand;
+        %tmp.47 = invoke %tmp.45 %tmp.46();
+        %tmp.48 = 5;
+        %tmp.49 = mod %tmp.47 %tmp.48;
+        %tmp.50 = 0;
+        %tmp.51 = eq %tmp.49 %tmp.50;
+        push %tmp.51;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_44_463_63_end:
+        %tmp.52 = phi [%tmp.44 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_12_463_63_begin] [%tmp.51 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_44_463_63_true] [%tmp.52 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_44_463_63_end];
+        bf %tmp.52 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_8_467_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_8_467_8_if_true:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_66_467_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 464 12 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_66_467_8_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_66_467_8_stop" ]
+        %angle.4 = local;
+        symbol [ angle %angle.4 464 16 21 ];
+        symbol [ scanAngle %tmp.54 464 24 33 ];
+        %tmp.54 = getv ? :scanAngle;
+        symbol [ Math %tmp.55 464 37 41 ];
+        %tmp.55 = getm $.Toybox.Math;
+        symbol [ rand %tmp.56 464 42 46 ];
+        %tmp.56 = getv function %tmp.55 :rand;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = 30;
+        %tmp.59 = mod %tmp.57 %tmp.58;
+        %tmp.60 = add %tmp.54 %tmp.59;
+        %tmp.61 = 15;
+        %tmp.62 = sub %tmp.60 %tmp.61;
+        lputv %angle.4 %tmp.62;
+        symbol [ angle %angle.4 464 16 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 465 12 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_66_467_8_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_66_467_8_stop" ]
+        %radius.5 = local;
+        symbol [ radius %radius.5 465 16 22 ];
+        %tmp.63 = 40;
+        symbol [ Math %tmp.64 465 31 35 ];
+        %tmp.64 = getm $.Toybox.Math;
+        symbol [ rand %tmp.65 465 36 40 ];
+        %tmp.65 = getv function %tmp.64 :rand;
+        %tmp.66 = invoke %tmp.64 %tmp.65();
+        %tmp.67 = 50;
+        %tmp.68 = mod %tmp.66 %tmp.67;
+        %tmp.69 = add %tmp.63 %tmp.68;
+        lputv %radius.5 %tmp.69;
+        symbol [ radius %radius.5 465 16 22 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 466 12 ]
+        symbol [ targets %tmp.71 466 12 19 ];
+        %tmp.71 = getv ? :targets;
+        symbol [ add %tmp.72 466 20 23 ];
+        %tmp.72 = getv function %tmp.71 :add;
+        %tmp.73 = newa 3;
+        %tmp.74 = lgetv %angle.4;
+        symbol [ angle %tmp.74 466 25 30 ];
+        %tmp.75 = dup %tmp.73;
+        %tmp.76 = aputv %tmp.75 0 %tmp.74;
+        %tmp.77 = lgetv %radius.5;
+        symbol [ radius %tmp.77 466 32 38 ];
+        %tmp.78 = dup %tmp.76;
+        %tmp.79 = aputv %tmp.78 1 %tmp.77;
+        %tmp.80 = lgetv %currentSec;
+        symbol [ currentSec %tmp.80 466 40 50 ];
+        %tmp.81 = dup %tmp.79;
+        %tmp.82 = aputv %tmp.81 2 %tmp.80;
+        invoke %tmp.71 %tmp.72(%tmp.82);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_66_467_8_stop:
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_8_467_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_463_8_467_8_if_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_450_39_468_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 471; @symbol_functiondef = [drawTargets,471,13,24]; @symbol_param<0> = [dc,471,25,27]; ]
+    function drawTargets(dc) {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_471_29_484_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 472 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 472 8 10 ];
+        symbol [ setColor %tmp.2 472 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ TARGET_RED %tmp.4 472 20 30 ];
+        %tmp.4 = getv ? :TARGET_RED;
+        symbol [ Graphics %tmp.5 472 32 40 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 472 41 58 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 474 8 ]
+        for @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_test @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_incr @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_init:
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_begin" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 474 17 18 ];
+        %tmp.7 = 0;
+        lputv %i.1 %tmp.7;
+        symbol [ i %i.1 474 17 18 ];
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_test:
+        %tmp.8 = lgetv %i.1;
+        symbol [ i %tmp.8 474 24 25 ];
+        symbol [ targets %tmp.10 474 28 35 ];
+        %tmp.10 = getv ? :targets;
+        symbol [ size %tmp.11 474 36 40 ];
+        %tmp.11 = getv function %tmp.10 :size;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = lt %tmp.8 %tmp.12;
+        bf %tmp.13 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_begin:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 475 12 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_stop" ]
+        %angle.2 = local;
+        symbol [ angle %angle.2 475 16 21 ];
+        symbol [ targets %tmp.15 475 24 31 ];
+        %tmp.15 = getv ? :targets;
+        %tmp.16 = lgetv %i.1;
+        symbol [ i %tmp.16 475 32 33 ];
+        %tmp.17 = agetv %tmp.15 %tmp.16;
+        %tmp.18 = 0;
+        %tmp.19 = agetv %tmp.17 %tmp.18;
+        lputv %angle.2 %tmp.19;
+        symbol [ angle %angle.2 475 16 21 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 476 12 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_stop" ]
+        %radius.3 = local;
+        symbol [ radius %radius.3 476 16 22 ];
+        symbol [ targets %tmp.21 476 25 32 ];
+        %tmp.21 = getv ? :targets;
+        %tmp.22 = lgetv %i.1;
+        symbol [ i %tmp.22 476 33 34 ];
+        %tmp.23 = agetv %tmp.21 %tmp.22;
+        %tmp.24 = 1;
+        %tmp.25 = agetv %tmp.23 %tmp.24;
+        lputv %radius.3 %tmp.25;
+        symbol [ radius %radius.3 476 16 22 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 477 12 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_stop" ]
+        %pos.4 = local;
+        symbol [ pos %pos.4 477 16 19 ];
+        %tmp.26 = self;
+        symbol [ getCircularPosition %tmp.27 477 22 41 ];
+        %tmp.27 = getv function %tmp.26 :getCircularPosition;
+        %tmp.28 = lgetv %angle.2;
+        symbol [ angle %tmp.28 477 42 47 ];
+        %tmp.29 = lgetv %radius.3;
+        symbol [ radius %tmp.29 477 49 55 ];
+        %tmp.30 = invoke %tmp.26 %tmp.27(%tmp.28, %tmp.29);
+        lputv %pos.4 %tmp.30;
+        symbol [ pos %pos.4 477 16 19 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 480 12 ]
+        %tmp.31 = lgetv %dc;
+        symbol [ dc %tmp.31 480 12 14 ];
+        symbol [ setPenWidth %tmp.32 480 15 26 ];
+        %tmp.32 = getv function %tmp.31 :setPenWidth;
+        %tmp.33 = 1;
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 481 12 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 481 12 14 ];
+        symbol [ drawCircle %tmp.35 481 15 25 ];
+        %tmp.35 = getv function %tmp.34 :drawCircle;
+        %tmp.36 = lgetv %pos.4;
+        symbol [ pos %tmp.36 481 26 29 ];
+        %tmp.37 = 0;
+        %tmp.38 = agetv %tmp.36 %tmp.37;
+        %tmp.39 = lgetv %pos.4;
+        symbol [ pos %tmp.39 481 34 37 ];
+        %tmp.40 = 1;
+        %tmp.41 = agetv %tmp.39 %tmp.40;
+        %tmp.42 = 6;
+        symbol [ scale %tmp.44 481 47 52 ];
+        %tmp.44 = getv ? :scale;
+        %tmp.45 = mul %tmp.42 %tmp.44;
+        symbol [ toNumber %tmp.46 481 54 62 ];
+        %tmp.46 = getv function %tmp.45 :toNumber;
+        %tmp.47 = invoke %tmp.45 %tmp.46();
+        invoke %tmp.34 %tmp.35(%tmp.38, %tmp.41, %tmp.47);
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 482 12 ]
+        %tmp.48 = lgetv %dc;
+        symbol [ dc %tmp.48 482 12 14 ];
+        symbol [ fillCircle %tmp.49 482 15 25 ];
+        %tmp.49 = getv function %tmp.48 :fillCircle;
+        %tmp.50 = lgetv %pos.4;
+        symbol [ pos %tmp.50 482 26 29 ];
+        %tmp.51 = 0;
+        %tmp.52 = agetv %tmp.50 %tmp.51;
+        %tmp.53 = lgetv %pos.4;
+        symbol [ pos %tmp.53 482 34 37 ];
+        %tmp.54 = 1;
+        %tmp.55 = agetv %tmp.53 %tmp.54;
+        %tmp.56 = 2;
+        symbol [ scale %tmp.58 482 47 52 ];
+        %tmp.58 = getv ? :scale;
+        %tmp.59 = mul %tmp.56 %tmp.58;
+        symbol [ toNumber %tmp.60 482 54 62 ];
+        %tmp.60 = getv function %tmp.59 :toNumber;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        invoke %tmp.48 %tmp.49(%tmp.52, %tmp.55, %tmp.61);
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_49_483_8_stop:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_incr:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 474 ]
+        %tmp.64 = lgetv %i.1;
+        symbol [ i %tmp.64 474 44 45 ];
+        %tmp.65 = add %tmp.64 1;
+        lputv %i.1 %tmp.65;
+        symbol [ i %i.1 474 44 45 ];
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_test;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_474_8_483_8_for_end:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_471_29_484_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 487; @symbol_functiondef = [getCurrentHeartRate,487,13,32]; ]
+    function getCurrentHeartRate() {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_487_35_499_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 488 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_487_35_499_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_487_35_499_4_stop" ]
+        %activityInfo.1 = local;
+        symbol [ activityInfo %activityInfo.1 488 12 24 ];
+        symbol [ Activity %tmp.1 488 27 35 ];
+        %tmp.1 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.2 488 36 51 ];
+        %tmp.2 = getv function %tmp.1 :getActivityInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %activityInfo.1 %tmp.3;
+        symbol [ activityInfo %activityInfo.1 488 12 24 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 489 8 ]
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_8_491_8_if_stmt:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_12_489_69_begin:
+        %tmp.4 = lgetv %activityInfo.1;
+        symbol [ activityInfo %tmp.4 489 12 24 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_8_491_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_36_489_69_true:
+        %tmp.7 = lgetv %activityInfo.1;
+        symbol [ activityInfo %tmp.7 489 36 48 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ currentHeartRate %tmp.9 489 49 65 ];
+        %tmp.9 = getv %tmp.8 :currentHeartRate;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        push %tmp.11;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_36_489_69_end:
+        %tmp.12 = phi [%tmp.6 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_12_489_69_begin] [%tmp.11 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_36_489_69_true] [%tmp.12 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_36_489_69_end];
+        bf %tmp.12 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_8_491_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_8_491_8_if_true:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_75_491_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 490 12 ]
+        %tmp.13 = lgetv %activityInfo.1;
+        symbol [ activityInfo %tmp.13 490 19 31 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ currentHeartRate %tmp.15 490 32 48 ];
+        %tmp.15 = getv %tmp.14 :currentHeartRate;
+        ret %tmp.15;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_75_491_8_stop:
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_8_491_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_489_8_491_8_if_end:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 493 8 ]
+        [ "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_487_35_499_4_start" "C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_487_35_499_4_stop" ]
+        %sample.2 = local;
+        symbol [ sample %sample.2 493 12 18 ];
+        symbol [ ActivityMonitor %tmp.16 493 21 36 ];
+        %tmp.16 = getm $.Toybox.ActivityMonitor;
+        symbol [ getHeartRateHistory %tmp.17 493 37 56 ];
+        %tmp.17 = getv function %tmp.16 :getHeartRateHistory;
+        %tmp.18 = 1;
+        %tmp.19 = true;
+        %tmp.20 = invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19);
+        symbol [ next %tmp.21 493 66 70 ];
+        %tmp.21 = getv function %tmp.20 :next;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        lputv %sample.2 %tmp.22;
+        symbol [ sample %sample.2 493 12 18 ];
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 494 8 ]
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_8_496_8_if_stmt:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_12_494_66_begin:
+        %tmp.23 = lgetv %sample.2;
+        symbol [ sample %tmp.23 494 12 18 ];
+        %tmp.24 = null;
+        %tmp.25 = ne %tmp.23 %tmp.24;
+        bf %tmp.25 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_8_496_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_30_494_66_true:
+        %tmp.26 = lgetv %sample.2;
+        symbol [ sample %tmp.26 494 30 36 ];
+        %tmp.27 = as %tmp.26 { (!Null) };
+        symbol [ heartRate %tmp.28 494 37 46 ];
+        %tmp.28 = getv %tmp.27 :heartRate;
+        symbol [ ActivityMonitor %tmp.29 494 50 65 ];
+        %tmp.29 = getm $.Toybox.ActivityMonitor;
+        symbol [ INVALID_HR_SAMPLE %tmp.30 494 66 83 ];
+        %tmp.30 = getv %tmp.29 :INVALID_HR_SAMPLE;
+        %tmp.31 = ne %tmp.28 %tmp.30;
+        push %tmp.31;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_30_494_66_end:
+        %tmp.32 = phi [%tmp.25 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_12_494_66_begin] [%tmp.31 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_30_494_66_true] [%tmp.32 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_30_494_66_end];
+        bf %tmp.32 @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_8_496_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_8_496_8_if_true:
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_85_496_8_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 495 12 ]
+        %tmp.33 = lgetv %sample.2;
+        symbol [ sample %tmp.33 495 19 25 ];
+        %tmp.34 = as %tmp.33 { (!Null) };
+        symbol [ heartRate %tmp.35 495 26 35 ];
+        %tmp.35 = getv %tmp.34 :heartRate;
+        ret %tmp.35;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_85_496_8_stop:
+        goto @C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_8_496_8_if_end;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_494_8_496_8_if_end:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 498 8 ]
+        %tmp.36 = null;
+        ret %tmp.36;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_487_35_499_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 501; @symbol_functiondef = [onEnterSleep,501,13,25]; ]
+    function onEnterSleep() {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_501_28_503_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 502 8 ]
+        %tmp.1 = true;
+        symbol [ needsFullRedraw ? 502 8 23 ];
+        putv self :needsFullRedraw %tmp.1;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_501_28_503_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 505; @symbol_functiondef = [onExitSleep,505,13,24]; ]
+    function onExitSleep() {
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_505_27_507_4_start:
+[ "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc" 506 8 ]
+        %tmp.1 = true;
+        symbol [ needsFullRedraw ? 506 8 23 ];
+        putv self :needsFullRedraw %tmp.1;
+C__Users_jean_baptiste_bayle_Desktop_programmation_Garmin_NewWatch1_source_NewWatch1View_mc_505_27_507_4_stop:
+    }
+    [ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 509; @symbol_functiondef = [onHide,509,13,19]; ]
+    function onHide() {
+    }
+}
+[ @file = "C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\source\NewWatch1View.mc"; @line = 5; ]
+<init> {
+}

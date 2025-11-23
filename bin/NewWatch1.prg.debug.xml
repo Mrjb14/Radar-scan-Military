@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\jean-baptiste.bayle\Desktop\programmation\Garmin\NewWatch1\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="1" lineNum="31" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="1" lineNum="32" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="2" lineNum="6" parent="globals/Background" pc="268435486" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\bin\\gen\\006-B3076-00\\source\\Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="4" lineNum="5" parent="globals/NewWatch1App" pc="268435529" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="5" lineNum="15" parent="globals/NewWatch1View" pc="268435548" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="5" lineNum="50" parent="globals/NewWatch1View" pc="268435566" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="6" lineNum="8" parent="globals/Background" pc="268435581" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="6" lineNum="9" parent="globals/Background" pc="268435585" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="6" lineNum="13" parent="globals/Background" pc="268435606" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="7" lineNum="16" parent="globals/Background" pc="268435627" symbol="draw"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="7" lineNum="18" parent="globals/Background" pc="268435629" symbol="draw"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1Background.mc" id="7" lineNum="19" parent="globals/Background" pc="268435671" symbol="draw"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="8" lineNum="12" parent="globals/NewWatch1App" pc="268435684" symbol="onStart"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="9" lineNum="25" parent="globals/NewWatch1App" pc="268435687" symbol="onSettingsChanged"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="9" lineNum="26" parent="globals/NewWatch1App" pc="268435689" symbol="onSettingsChanged"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="10" lineNum="20" parent="globals/NewWatch1App" pc="268435706" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="10" lineNum="21" parent="globals/NewWatch1App" pc="268435708" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="11" lineNum="7" parent="globals/NewWatch1App" pc="268435745" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="11" lineNum="8" parent="globals/NewWatch1App" pc="268435747" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1App.mc" id="12" lineNum="16" parent="globals/NewWatch1App" pc="268435766" symbol="onStop"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="320" parent="globals/NewWatch1View" pc="268435769" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="321" parent="globals/NewWatch1View" pc="268435773" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="322" parent="globals/NewWatch1View" pc="268435798" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="323" parent="globals/NewWatch1View" pc="268435805" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="324" parent="globals/NewWatch1View" pc="268435818" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="326" parent="globals/NewWatch1View" pc="268435828" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="327" parent="globals/NewWatch1View" pc="268435850" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="13" lineNum="328" parent="globals/NewWatch1View" pc="268435885" symbol="drawScanTrail"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="14" lineNum="334" parent="globals/NewWatch1View" pc="268435925" symbol="drawTime"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="14" lineNum="335" parent="globals/NewWatch1View" pc="268435929" symbol="drawTime"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="14" lineNum="336" parent="globals/NewWatch1View" pc="268435946" symbol="drawTime"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="14" lineNum="341" parent="globals/NewWatch1View" pc="268436034" symbol="drawTime"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="14" lineNum="342" parent="globals/NewWatch1View" pc="268436056" symbol="drawTime"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="15" lineNum="277" parent="globals/NewWatch1View" pc="268436115" symbol="clearDynamicAreas"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="15" lineNum="278" parent="globals/NewWatch1View" pc="268436117" symbol="clearDynamicAreas"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="15" lineNum="281" parent="globals/NewWatch1View" pc="268436139" symbol="clearDynamicAreas"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="15" lineNum="284" parent="globals/NewWatch1View" pc="268436190" symbol="clearDynamicAreas"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="15" lineNum="285" parent="globals/NewWatch1View" pc="268436204" symbol="clearDynamicAreas"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="16" lineNum="304" parent="globals/NewWatch1View" pc="268436219" symbol="drawScanTriangle"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="16" lineNum="305" parent="globals/NewWatch1View" pc="268436223" symbol="drawScanTriangle"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="16" lineNum="306" parent="globals/NewWatch1View" pc="268436239" symbol="drawScanTriangle"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="16" lineNum="309" parent="globals/NewWatch1View" pc="268436264" symbol="drawScanTriangle"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="16" lineNum="315" parent="globals/NewWatch1View" pc="268436578" symbol="drawScanTriangle"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="16" lineNum="316" parent="globals/NewWatch1View" pc="268436600" symbol="drawScanTriangle"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="17" lineNum="198" parent="globals/NewWatch1View" pc="268436615" symbol="drawDegreeMarkers"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="17" lineNum="199" parent="globals/NewWatch1View" pc="268436619" symbol="drawDegreeMarkers"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="17" lineNum="201" parent="globals/NewWatch1View" pc="268436641" symbol="drawDegreeMarkers"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="17" lineNum="208" parent="globals/NewWatch1View" pc="268436993" symbol="drawDegreeMarkers"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="17" lineNum="209" parent="globals/NewWatch1View" pc="268437017" symbol="drawDegreeMarkers"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="158" parent="globals/NewWatch1View" pc="268437089" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="159" parent="globals/NewWatch1View" pc="268437093" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="160" parent="globals/NewWatch1View" pc="268437115" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="162" parent="globals/NewWatch1View" pc="268437132" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="165" parent="globals/NewWatch1View" pc="268437157" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="166" parent="globals/NewWatch1View" pc="268437184" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="170" parent="globals/NewWatch1View" pc="268437241" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="18" lineNum="171" parent="globals/NewWatch1View" pc="268437268" symbol="drawGrid"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="19" lineNum="442" parent="globals/NewWatch1View" pc="268437326" symbol="drawStatusIndicators"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="19" lineNum="443" parent="globals/NewWatch1View" pc="268437328" symbol="drawStatusIndicators"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="19" lineNum="446" parent="globals/NewWatch1View" pc="268437350" symbol="drawStatusIndicators"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="59" parent="globals/NewWatch1View" pc="268437412" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="60" parent="globals/NewWatch1View" pc="268437414" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="61" parent="globals/NewWatch1View" pc="268437433" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="62" parent="globals/NewWatch1View" pc="268437452" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="63" parent="globals/NewWatch1View" pc="268437474" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="64" parent="globals/NewWatch1View" pc="268437496" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="67" parent="globals/NewWatch1View" pc="268437518" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="68" parent="globals/NewWatch1View" pc="268437531" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="69" parent="globals/NewWatch1View" pc="268437544" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="70" parent="globals/NewWatch1View" pc="268437557" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="73" parent="globals/NewWatch1View" pc="268437570" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="20" lineNum="74" parent="globals/NewWatch1View" pc="268437617" symbol="onLayout"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="377" parent="globals/NewWatch1View" pc="268437665" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="379" parent="globals/NewWatch1View" pc="268437669" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="380" parent="globals/NewWatch1View" pc="268437692" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="381" parent="globals/NewWatch1View" pc="268437705" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="384" parent="globals/NewWatch1View" pc="268437771" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="385" parent="globals/NewWatch1View" pc="268437794" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="386" parent="globals/NewWatch1View" pc="268437811" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="389" parent="globals/NewWatch1View" pc="268437868" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="390" parent="globals/NewWatch1View" pc="268437891" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="391" parent="globals/NewWatch1View" pc="268437908" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="21" lineNum="392" parent="globals/NewWatch1View" pc="268437933" symbol="drawAllBlips"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="22" lineNum="143" parent="globals/NewWatch1View" pc="268437976" symbol="drawCentralGlow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="22" lineNum="144" parent="globals/NewWatch1View" pc="268437980" symbol="drawCentralGlow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="22" lineNum="151" parent="globals/NewWatch1View" pc="268438148" symbol="drawCentralGlow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="22" lineNum="152" parent="globals/NewWatch1View" pc="268438172" symbol="drawCentralGlow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="22" lineNum="153" parent="globals/NewWatch1View" pc="268438194" symbol="drawCentralGlow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="23" lineNum="242" parent="globals/NewWatch1View" pc="268438265" symbol="drawCenterDot"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="23" lineNum="243" parent="globals/NewWatch1View" pc="268438267" symbol="drawCenterDot"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="23" lineNum="244" parent="globals/NewWatch1View" pc="268438289" symbol="drawCenterDot"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="23" lineNum="246" parent="globals/NewWatch1View" pc="268438340" symbol="drawCenterDot"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="23" lineNum="247" parent="globals/NewWatch1View" pc="268438362" symbol="drawCenterDot"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="24" lineNum="187" parent="globals/NewWatch1View" pc="268438414" symbol="drawCentralCross"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="24" lineNum="188" parent="globals/NewWatch1View" pc="268438416" symbol="drawCentralCross"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="24" lineNum="189" parent="globals/NewWatch1View" pc="268438438" symbol="drawCentralCross"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="24" lineNum="192" parent="globals/NewWatch1View" pc="268438455" symbol="drawCentralCross"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="24" lineNum="194" parent="globals/NewWatch1View" pc="268438529" symbol="drawCentralCross"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="472" parent="globals/NewWatch1View" pc="268438604" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="473" parent="globals/NewWatch1View" pc="268438608" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="475" parent="globals/NewWatch1View" pc="268438630" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="476" parent="globals/NewWatch1View" pc="268438660" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="477" parent="globals/NewWatch1View" pc="268438679" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="478" parent="globals/NewWatch1View" pc="268438698" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="481" parent="globals/NewWatch1View" pc="268438715" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="482" parent="globals/NewWatch1View" pc="268438732" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="25" lineNum="483" parent="globals/NewWatch1View" pc="268438783" symbol="drawTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="26" lineNum="502" parent="globals/NewWatch1View" pc="268438848" symbol="onEnterSleep"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="26" lineNum="503" parent="globals/NewWatch1View" pc="268438850" symbol="onEnterSleep"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="27" lineNum="251" parent="globals/NewWatch1View" pc="268438861" symbol="drawStaticLabels"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="27" lineNum="252" parent="globals/NewWatch1View" pc="268438863" symbol="drawStaticLabels"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="27" lineNum="255" parent="globals/NewWatch1View" pc="268438885" symbol="drawStaticLabels"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="28" lineNum="347" parent="globals/NewWatch1View" pc="268438962" symbol="drawDate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="28" lineNum="348" parent="globals/NewWatch1View" pc="268438966" symbol="drawDate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="28" lineNum="349" parent="globals/NewWatch1View" pc="268439003" symbol="drawDate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="28" lineNum="355" parent="globals/NewWatch1View" pc="268439149" symbol="drawDate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="28" lineNum="356" parent="globals/NewWatch1View" pc="268439171" symbol="drawDate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="29" lineNum="396" parent="globals/NewWatch1View" pc="268439230" symbol="getCircularPosition"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="29" lineNum="397" parent="globals/NewWatch1View" pc="268439234" symbol="getCircularPosition"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="29" lineNum="398" parent="globals/NewWatch1View" pc="268439259" symbol="getCircularPosition"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="29" lineNum="399" parent="globals/NewWatch1View" pc="268439308" symbol="getCircularPosition"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="29" lineNum="400" parent="globals/NewWatch1View" pc="268439357" symbol="getCircularPosition"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="215" parent="globals/NewWatch1View" pc="268439384" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="216" parent="globals/NewWatch1View" pc="268439388" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="217" parent="globals/NewWatch1View" pc="268439410" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="219" parent="globals/NewWatch1View" pc="268439427" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="220" parent="globals/NewWatch1View" pc="268439452" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="223" parent="globals/NewWatch1View" pc="268439477" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="224" parent="globals/NewWatch1View" pc="268439500" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="227" parent="globals/NewWatch1View" pc="268439523" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="228" parent="globals/NewWatch1View" pc="268439564" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="231" parent="globals/NewWatch1View" pc="268439605" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="232" parent="globals/NewWatch1View" pc="268439646" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="235" parent="globals/NewWatch1View" pc="268439687" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="30" lineNum="237" parent="globals/NewWatch1View" pc="268439746" symbol="drawInterfaceCorners"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="361" parent="globals/NewWatch1View" pc="268439806" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="362" parent="globals/NewWatch1View" pc="268439810" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="363" parent="globals/NewWatch1View" pc="268439827" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="366" parent="globals/NewWatch1View" pc="268439857" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="367" parent="globals/NewWatch1View" pc="268439879" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="368" parent="globals/NewWatch1View" pc="268439896" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="31" lineNum="372" parent="globals/NewWatch1View" pc="268440032" symbol="drawSeconds"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="289" parent="globals/NewWatch1View" pc="268440091" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="290" parent="globals/NewWatch1View" pc="268440095" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="291" parent="globals/NewWatch1View" pc="268440111" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="292" parent="globals/NewWatch1View" pc="268440142" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="293" parent="globals/NewWatch1View" pc="268440182" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="295" parent="globals/NewWatch1View" pc="268440222" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="296" parent="globals/NewWatch1View" pc="268440244" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="297" parent="globals/NewWatch1View" pc="268440261" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="32" lineNum="300" parent="globals/NewWatch1View" pc="268440293" symbol="drawScanLine"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="451" parent="globals/NewWatch1View" pc="268440320" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="453" parent="globals/NewWatch1View" pc="268440324" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="454" parent="globals/NewWatch1View" pc="268440332" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="455" parent="globals/NewWatch1View" pc="268440362" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="456" parent="globals/NewWatch1View" pc="268440384" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="456" parent="globals/NewWatch1View" pc="268440395" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="457" parent="globals/NewWatch1View" pc="268440408" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="458" parent="globals/NewWatch1View" pc="268440419" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="461" parent="globals/NewWatch1View" pc="268440458" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="464" parent="globals/NewWatch1View" pc="268440468" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="465" parent="globals/NewWatch1View" pc="268440524" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="466" parent="globals/NewWatch1View" pc="268440562" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="34" lineNum="467" parent="globals/NewWatch1View" pc="268440591" symbol="updateTargets"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="35" lineNum="506" parent="globals/NewWatch1View" pc="268440649" symbol="onExitSleep"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="35" lineNum="507" parent="globals/NewWatch1View" pc="268440651" symbol="onExitSleep"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="36" lineNum="77" parent="globals/NewWatch1View" pc="268440662" symbol="onShow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="36" lineNum="78" parent="globals/NewWatch1View" pc="268440664" symbol="onShow"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="428" parent="globals/NewWatch1View" pc="268440675" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="429" parent="globals/NewWatch1View" pc="268440679" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="430" parent="globals/NewWatch1View" pc="268440704" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="432" parent="globals/NewWatch1View" pc="268440729" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="433" parent="globals/NewWatch1View" pc="268440751" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="435" parent="globals/NewWatch1View" pc="268440768" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="436" parent="globals/NewWatch1View" pc="268440794" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="437" parent="globals/NewWatch1View" pc="268440820" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="37" lineNum="438" parent="globals/NewWatch1View" pc="268440846" symbol="drawCrosshair"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="107" parent="globals/NewWatch1View" pc="268440873" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="108" parent="globals/NewWatch1View" pc="268440875" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="111" parent="globals/NewWatch1View" pc="268440889" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="112" parent="globals/NewWatch1View" pc="268440911" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="115" parent="globals/NewWatch1View" pc="268440947" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="118" parent="globals/NewWatch1View" pc="268440961" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="121" parent="globals/NewWatch1View" pc="268440975" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="124" parent="globals/NewWatch1View" pc="268440989" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="127" parent="globals/NewWatch1View" pc="268441003" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="130" parent="globals/NewWatch1View" pc="268441017" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="133" parent="globals/NewWatch1View" pc="268441031" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="136" parent="globals/NewWatch1View" pc="268441045" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="38" lineNum="139" parent="globals/NewWatch1View" pc="268441059" symbol="drawStaticElements"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="39" lineNum="176" parent="globals/NewWatch1View" pc="268441074" symbol="drawConcentricCircles"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="39" lineNum="177" parent="globals/NewWatch1View" pc="268441078" symbol="drawConcentricCircles"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="39" lineNum="178" parent="globals/NewWatch1View" pc="268441100" symbol="drawConcentricCircles"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="39" lineNum="180" parent="globals/NewWatch1View" pc="268441117" symbol="drawConcentricCircles"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="39" lineNum="181" parent="globals/NewWatch1View" pc="268441177" symbol="drawConcentricCircles"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="39" lineNum="182" parent="globals/NewWatch1View" pc="268441201" symbol="drawConcentricCircles"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="488" parent="globals/NewWatch1View" pc="268441266" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="489" parent="globals/NewWatch1View" pc="268441270" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="490" parent="globals/NewWatch1View" pc="268441287" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="491" parent="globals/NewWatch1View" pc="268441307" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="494" parent="globals/NewWatch1View" pc="268441319" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="495" parent="globals/NewWatch1View" pc="268441352" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="496" parent="globals/NewWatch1View" pc="268441376" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="40" lineNum="499" parent="globals/NewWatch1View" pc="268441388" symbol="getCurrentHeartRate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="260" parent="globals/NewWatch1View" pc="268441390" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="261" parent="globals/NewWatch1View" pc="268441394" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="262" parent="globals/NewWatch1View" pc="268441416" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="264" parent="globals/NewWatch1View" pc="268441433" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="265" parent="globals/NewWatch1View" pc="268441458" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="266" parent="globals/NewWatch1View" pc="268441483" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="268" parent="globals/NewWatch1View" pc="268441508" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="269" parent="globals/NewWatch1View" pc="268441528" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="270" parent="globals/NewWatch1View" pc="268441572" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="41" lineNum="272" parent="globals/NewWatch1View" pc="268441616" symbol="drawDistanceScale"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="42" lineNum="54" parent="globals/NewWatch1View" pc="268441696" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="42" lineNum="55" parent="globals/NewWatch1View" pc="268441698" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="42" lineNum="56" parent="globals/NewWatch1View" pc="268441716" symbol="initialize"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="404" parent="globals/NewWatch1View" pc="268441730" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="406" parent="globals/NewWatch1View" pc="268441734" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="407" parent="globals/NewWatch1View" pc="268441780" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="410" parent="globals/NewWatch1View" pc="268441814" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="411" parent="globals/NewWatch1View" pc="268441836" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="412" parent="globals/NewWatch1View" pc="268441875" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="413" parent="globals/NewWatch1View" pc="268441914" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="416" parent="globals/NewWatch1View" pc="268441932" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="419" parent="globals/NewWatch1View" pc="268441950" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="43" lineNum="423" parent="globals/NewWatch1View" pc="268442005" symbol="drawBlip"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="81" parent="globals/NewWatch1View" pc="268442061" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="82" parent="globals/NewWatch1View" pc="268442065" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="85" parent="globals/NewWatch1View" pc="268442084" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="86" parent="globals/NewWatch1View" pc="268442101" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="88" parent="globals/NewWatch1View" pc="268442123" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="89" parent="globals/NewWatch1View" pc="268442134" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="90" parent="globals/NewWatch1View" pc="268442148" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="92" parent="globals/NewWatch1View" pc="268442161" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="96" parent="globals/NewWatch1View" pc="268442175" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="97" parent="globals/NewWatch1View" pc="268442189" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="98" parent="globals/NewWatch1View" pc="268442203" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="99" parent="globals/NewWatch1View" pc="268442223" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="100" parent="globals/NewWatch1View" pc="268442237" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="101" parent="globals/NewWatch1View" pc="268442251" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\source\\NewWatch1View.mc" id="44" lineNum="102" parent="globals/NewWatch1View" pc="268442265" symbol="onUpdate"/>
+        <entry filename="c:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\bin\\gen\\006-B3076-00\\source\\Rez.mcgen" id="45" lineNum="18" parent="globals/Rez/Layouts" pc="268442280" symbol="WatchFace"/>
+        <entry filename="c:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\bin\\gen\\006-B3076-00\\source\\Rez.mcgen" id="45" lineNum="19" parent="globals/Rez/Layouts" pc="268442292" symbol="WatchFace"/>
+        <entry filename="c:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\bin\\gen\\006-B3076-00\\source\\Rez.mcgen" id="45" lineNum="21" parent="globals/Rez/Layouts" pc="268442320" symbol="WatchFace"/>
+        <entry filename="c:\\Users\\jean-baptiste.bayle\\Desktop\\programmation\\Garmin\\NewWatch1\\bin\\gen\\006-B3076-00\\source\\Rez.mcgen" id="45" lineNum="23" parent="globals/Rez/Layouts" pc="268442455" symbol="WatchFace"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="20" method="true" symbol="drawDate"/>
+        <entry id="32" method="true" symbol="drawTargets"/>
+        <entry id="14" method="true" symbol="drawBlip"/>
+        <entry id="49" method="true" symbol="updateTargets"/>
+        <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry field="true" id="52" symbol="OrbitronTime"/>
+        <entry field="true" id="59" symbol="ColorRed"/>
+        <entry id="8" object="true" symbol="NewWatch1View"/>
+        <entry id="24" method="true" symbol="drawInterfaceCorners"/>
+        <entry field="true" id="41" symbol="&lt;globals/NewWatch1View/&lt;&gt;scale&gt;"/>
+        <entry field="true" id="42" symbol="&lt;globals/NewWatch1View/&lt;&gt;scanAngle&gt;"/>
+        <entry id="28" method="true" symbol="drawSeconds"/>
+        <entry id="15" method="true" symbol="drawCenterDot"/>
+        <entry id="18" method="true" symbol="drawConcentricCircles"/>
+        <entry field="true" id="62" symbol="MilitaryFormatTitle"/>
+        <entry id="8388924" module="true" symbol="Gregorian"/>
+        <entry id="19" method="true" symbol="drawCrosshair"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="25" method="true" symbol="drawScanLine"/>
+        <entry id="21" method="true" symbol="drawDegreeMarkers"/>
+        <entry field="true" id="44" symbol="&lt;globals/NewWatch1View/&lt;&gt;screenWidth&gt;"/>
+        <entry field="true" id="56" symbol="ColorBlue"/>
+        <entry id="33" method="true" symbol="drawTime"/>
+        <entry field="true" id="45" symbol="&lt;globals/NewWatch1View/&lt;&gt;smallFont&gt;"/>
+        <entry field="true" id="53" symbol="AppName"/>
+        <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry id="30" method="true" symbol="drawStaticLabels"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry field="true" id="40" symbol="&lt;globals/NewWatch1View/&lt;&gt;orbitronTime&gt;"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="13" method="true" symbol="drawAllBlips"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="34" method="true" symbol="getCircularPosition"/>
+        <entry field="true" id="46" symbol="&lt;globals/NewWatch1View/&lt;&gt;targets&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry field="true" id="57" symbol="ColorDarkGray"/>
+        <entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="16" method="true" symbol="drawCentralCross"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8389376" method="true" symbol="onEnterSleep"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry field="true" id="47" symbol="&lt;globals/NewWatch1View/&lt;&gt;tinyFont&gt;"/>
+        <entry field="true" id="60" symbol="ColorWhite"/>
+        <entry field="true" id="55" symbol="ColorBlack"/>
+        <entry id="29" method="true" symbol="drawStaticElements"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="22" method="true" symbol="drawDistanceScale"/>
+        <entry id="26" method="true" symbol="drawScanTrail"/>
+        <entry field="true" id="48" symbol="&lt;globals/NewWatch1View/&lt;&gt;updateCounter&gt;"/>
+        <entry id="8389377" method="true" symbol="onExitSleep"/>
+        <entry field="true" id="11" symbol="&lt;globals/NewWatch1View/&lt;&gt;centerY&gt;"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry field="true" id="36" symbol="&lt;globals/NewWatch1View/&lt;&gt;hugeFont&gt;"/>
+        <entry field="true" id="10" symbol="&lt;globals/NewWatch1View/&lt;&gt;centerX&gt;"/>
+        <entry id="27" method="true" symbol="drawScanTriangle"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="43" symbol="&lt;globals/NewWatch1View/&lt;&gt;screenHeight&gt;"/>
+        <entry id="12" method="true" symbol="clearDynamicAreas"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry id="31" method="true" symbol="drawStatusIndicators"/>
+        <entry field="true" id="50" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="54" symbol="BackgroundColorTitle"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="35" method="true" symbol="getCurrentHeartRate"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry field="true" id="51" symbol="OrbitronSmall"/>
+        <entry field="true" id="58" symbol="ColorLightGray"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry field="true" id="61" symbol="ForegroundColorTitle"/>
+        <entry id="7" object="true" symbol="NewWatch1App"/>
+        <entry field="true" id="39" symbol="&lt;globals/NewWatch1View/&lt;&gt;orbitronSmall&gt;"/>
+        <entry id="9" module="true" symbol="Layouts"/>
+        <entry id="23" method="true" symbol="drawGrid"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="38" symbol="&lt;globals/NewWatch1View/&lt;&gt;needsFullRedraw&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry field="true" id="37" symbol="&lt;globals/NewWatch1View/&lt;&gt;mediumFont&gt;"/>
+        <entry id="17" method="true" symbol="drawCentralGlow"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268435625" name="dictionary" stackId="1" startPc="268435585"/>
+        <entry arg="true" endPc="268435683" name="dc" stackId="1" startPc="268435627"/>
+        <entry arg="true" endPc="268435924" name="dc" stackId="1" startPc="268435769"/>
+        <entry endPc="268435923" name="radius" stackId="2" startPc="268435773"/>
+        <entry endPc="268435923" name="trailSpan" stackId="3" startPc="268435773"/>
+        <entry endPc="268435923" name="startAngle" stackId="4" startPc="268435773"/>
+        <entry endPc="268435923" name="endAngle" stackId="5" startPc="268435773"/>
+        <entry arg="true" endPc="268436114" name="dc" stackId="1" startPc="268435925"/>
+        <entry endPc="268436113" name="clockTime" stackId="2" startPc="268435929"/>
+        <entry endPc="268436113" name="timeString" stackId="3" startPc="268435929"/>
+        <entry arg="true" endPc="268436218" name="dc" stackId="1" startPc="268436115"/>
+        <entry arg="true" endPc="268436614" name="dc" stackId="1" startPc="268436219"/>
+        <entry arg="true" endPc="268436614" name="x" stackId="2" startPc="268436219"/>
+        <entry arg="true" endPc="268436614" name="y" stackId="3" startPc="268436219"/>
+        <entry arg="true" endPc="268436614" name="angle" stackId="4" startPc="268436219"/>
+        <entry endPc="268436613" name="size" stackId="5" startPc="268436223"/>
+        <entry endPc="268436613" name="radians" stackId="6" startPc="268436223"/>
+        <entry endPc="268436613" name="points" stackId="7" startPc="268436223"/>
+        <entry arg="true" endPc="268437088" name="dc" stackId="1" startPc="268436615"/>
+        <entry endPc="268437087" name="markers" stackId="2" startPc="268436619"/>
+        <entry endPc="268437087" name="i" stackId="3" startPc="268437017"/>
+        <entry arg="true" endPc="268437325" name="dc" stackId="1" startPc="268437089"/>
+        <entry endPc="268437324" name="gridSize" stackId="2" startPc="268437093"/>
+        <entry endPc="268437240" name="x" stackId="3" startPc="268437184"/>
+        <entry endPc="268437324" name="y" stackId="4" startPc="268437268"/>
+        <entry arg="true" endPc="268437411" name="dc" stackId="1" startPc="268437326"/>
+        <entry arg="true" endPc="268437664" name="dc" stackId="1" startPc="268437412"/>
+        <entry arg="true" endPc="268437975" name="dc" stackId="1" startPc="268437665"/>
+        <entry endPc="268437974" name="hrPos" stackId="2" startPc="268437669"/>
+        <entry endPc="268437974" name="hr" stackId="3" startPc="268437669"/>
+        <entry endPc="268437974" name="stepsPos" stackId="4" startPc="268437669"/>
+        <entry endPc="268437974" name="info" stackId="5" startPc="268437669"/>
+        <entry endPc="268437974" name="batPos" stackId="6" startPc="268437669"/>
+        <entry endPc="268437974" name="stats" stackId="7" startPc="268437669"/>
+        <entry endPc="268437974" name="batString" stackId="8" startPc="268437669"/>
+        <entry arg="true" endPc="268438264" name="dc" stackId="1" startPc="268437976"/>
+        <entry endPc="268438263" name="glowSteps" stackId="2" startPc="268437980"/>
+        <entry endPc="268438263" name="i" stackId="3" startPc="268438172"/>
+        <entry arg="true" endPc="268438413" name="dc" stackId="1" startPc="268438265"/>
+        <entry arg="true" endPc="268438603" name="dc" stackId="1" startPc="268438414"/>
+        <entry arg="true" endPc="268438847" name="dc" stackId="1" startPc="268438604"/>
+        <entry endPc="268438846" name="i" stackId="2" startPc="268438660"/>
+        <entry endPc="268438833" name="angle" stackId="3" startPc="268438660"/>
+        <entry endPc="268438833" name="radius" stackId="4" startPc="268438660"/>
+        <entry endPc="268438833" name="pos" stackId="5" startPc="268438660"/>
+        <entry arg="true" endPc="268438961" name="dc" stackId="1" startPc="268438861"/>
+        <entry arg="true" endPc="268439229" name="dc" stackId="1" startPc="268438962"/>
+        <entry endPc="268439228" name="today" stackId="2" startPc="268438966"/>
+        <entry endPc="268439228" name="dateString" stackId="3" startPc="268438966"/>
+        <entry arg="true" endPc="268439383" name="angle" stackId="1" startPc="268439230"/>
+        <entry arg="true" endPc="268439383" name="radius" stackId="2" startPc="268439230"/>
+        <entry endPc="268439383" name="radians" stackId="3" startPc="268439234"/>
+        <entry endPc="268439383" name="x" stackId="4" startPc="268439234"/>
+        <entry endPc="268439383" name="y" stackId="5" startPc="268439234"/>
+        <entry arg="true" endPc="268439805" name="dc" stackId="1" startPc="268439384"/>
+        <entry endPc="268439804" name="margin" stackId="2" startPc="268439388"/>
+        <entry endPc="268439804" name="length" stackId="3" startPc="268439388"/>
+        <entry arg="true" endPc="268440090" name="dc" stackId="1" startPc="268439806"/>
+        <entry endPc="268440089" name="clockTime" stackId="2" startPc="268439810"/>
+        <entry endPc="268440089" name="secString" stackId="3" startPc="268439810"/>
+        <entry arg="true" endPc="268440319" name="dc" stackId="1" startPc="268440091"/>
+        <entry endPc="268440318" name="radius" stackId="2" startPc="268440095"/>
+        <entry endPc="268440318" name="radians" stackId="3" startPc="268440095"/>
+        <entry endPc="268440318" name="endX" stackId="4" startPc="268440095"/>
+        <entry endPc="268440318" name="endY" stackId="5" startPc="268440095"/>
+        <entry arg="true" endPc="268440648" name="currentSec" stackId="1" startPc="268440320"/>
+        <entry endPc="268440647" name="newTargets" stackId="2" startPc="268440324"/>
+        <entry endPc="268440457" name="i" stackId="3" startPc="268440362"/>
+        <entry endPc="268440444" name="age" stackId="4" startPc="268440362"/>
+        <entry endPc="268440644" name="angle" stackId="5" startPc="268440524"/>
+        <entry endPc="268440644" name="radius" stackId="6" startPc="268440524"/>
+        <entry arg="true" endPc="268440872" name="dc" stackId="1" startPc="268440675"/>
+        <entry arg="true" endPc="268440872" name="x" stackId="2" startPc="268440675"/>
+        <entry arg="true" endPc="268440872" name="y" stackId="3" startPc="268440675"/>
+        <entry endPc="268440871" name="size" stackId="4" startPc="268440679"/>
+        <entry endPc="268440871" name="gap" stackId="5" startPc="268440679"/>
+        <entry arg="true" endPc="268441073" name="dc" stackId="1" startPc="268440873"/>
+        <entry arg="true" endPc="268441265" name="dc" stackId="1" startPc="268441074"/>
+        <entry endPc="268441264" name="radii" stackId="2" startPc="268441078"/>
+        <entry endPc="268441264" name="i" stackId="3" startPc="268441201"/>
+        <entry endPc="268441389" name="activityInfo" stackId="1" startPc="268441270"/>
+        <entry endPc="268441389" name="sample" stackId="2" startPc="268441270"/>
+        <entry arg="true" endPc="268441695" name="dc" stackId="1" startPc="268441390"/>
+        <entry endPc="268441694" name="x1" stackId="2" startPc="268441394"/>
+        <entry endPc="268441694" name="x2" stackId="3" startPc="268441394"/>
+        <entry endPc="268441694" name="y" stackId="4" startPc="268441394"/>
+        <entry arg="true" endPc="268442060" name="dc" stackId="1" startPc="268441730"/>
+        <entry arg="true" endPc="268442060" name="x" stackId="2" startPc="268441730"/>
+        <entry arg="true" endPc="268442060" name="y" stackId="3" startPc="268441730"/>
+        <entry arg="true" endPc="268442060" name="label" stackId="4" startPc="268441730"/>
+        <entry arg="true" endPc="268442060" name="value" stackId="5" startPc="268441730"/>
+        <entry arg="true" endPc="268442060" name="phase" stackId="6" startPc="268441730"/>
+        <entry endPc="268442059" name="pulse" stackId="7" startPc="268441734"/>
+        <entry endPc="268442059" name="radius" stackId="8" startPc="268441734"/>
+        <entry arg="true" endPc="268442279" name="dc" stackId="1" startPc="268442061"/>
+        <entry endPc="268442278" name="clockTime" stackId="2" startPc="268442065"/>
+        <entry arg="true" endPc="268442481" name="dc" stackId="1" startPc="268442280"/>
+        <entry endPc="268442481" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="2" startPc="268442292"/>
+        <entry endPc="268442481" name="rez_cmp_local_text_TimeLabel" stackId="3" startPc="268442292"/>
+    </localVars>
+    <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B3076-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MilitaryFormatTitle"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="OrbitronTime"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="OrbitronSmall"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="71" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Background" offset="150" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/Rez" offset="205" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/NewWatch1App" offset="268" parentId="globals" symbolId="NewWatch1App" type="class"/>
+        <dataEntry label="globals/NewWatch1View" offset="347" parentId="globals" symbolId="NewWatch1View" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="762" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="801" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="840" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="887" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435485" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="Background" startPc="268435486">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435528" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435547" name="&lt;init&gt;" parent="NewWatch1App" startPc="268435529">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435580" name="&lt;init&gt;" parent="NewWatch1View" startPc="268435548">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435626" name="initialize" parent="Background" startPc="268435581">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435683" name="draw" parent="Background" startPc="268435627">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435686" name="onStart" parent="NewWatch1App" startPc="268435684">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435705" name="onSettingsChanged" parent="NewWatch1App" startPc="268435687">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435744" name="getInitialView" parent="NewWatch1App" startPc="268435706">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435765" name="initialize" parent="NewWatch1App" startPc="268435745">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435768" name="onStop" parent="NewWatch1App" startPc="268435766">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435924" name="drawScanTrail" parent="NewWatch1View" startPc="268435769">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436114" name="drawTime" parent="NewWatch1View" startPc="268435925">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436218" name="clearDynamicAreas" parent="NewWatch1View" startPc="268436115">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436614" name="drawScanTriangle" parent="NewWatch1View" startPc="268436219">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="angle"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437088" name="drawDegreeMarkers" parent="NewWatch1View" startPc="268436615">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437325" name="drawGrid" parent="NewWatch1View" startPc="268437089">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437411" name="drawStatusIndicators" parent="NewWatch1View" startPc="268437326">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437664" name="onLayout" parent="NewWatch1View" startPc="268437412">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437975" name="drawAllBlips" parent="NewWatch1View" startPc="268437665">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438264" name="drawCentralGlow" parent="NewWatch1View" startPc="268437976">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438413" name="drawCenterDot" parent="NewWatch1View" startPc="268438265">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438603" name="drawCentralCross" parent="NewWatch1View" startPc="268438414">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438847" name="drawTargets" parent="NewWatch1View" startPc="268438604">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438860" name="onEnterSleep" parent="NewWatch1View" startPc="268438848">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438961" name="drawStaticLabels" parent="NewWatch1View" startPc="268438861">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439229" name="drawDate" parent="NewWatch1View" startPc="268438962">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439383" name="getCircularPosition" parent="NewWatch1View" startPc="268439230">
+            <param id="angle"/>
+            <param id="radius"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439805" name="drawInterfaceCorners" parent="NewWatch1View" startPc="268439384">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440090" name="drawSeconds" parent="NewWatch1View" startPc="268439806">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440319" name="drawScanLine" parent="NewWatch1View" startPc="268440091">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="NewWatch1View">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440648" name="updateTargets" parent="NewWatch1View" startPc="268440320">
+            <param id="currentSec"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440661" name="onExitSleep" parent="NewWatch1View" startPc="268440649">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440674" name="onShow" parent="NewWatch1View" startPc="268440662">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440872" name="drawCrosshair" parent="NewWatch1View" startPc="268440675">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441073" name="drawStaticElements" parent="NewWatch1View" startPc="268440873">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441265" name="drawConcentricCircles" parent="NewWatch1View" startPc="268441074">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441389" name="getCurrentHeartRate" parent="NewWatch1View" startPc="268441266">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441695" name="drawDistanceScale" parent="NewWatch1View" startPc="268441390">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441729" name="initialize" parent="NewWatch1View" startPc="268441696">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442060" name="drawBlip" parent="NewWatch1View" startPc="268441730">
+            <param id="dc"/>
+            <param id="x"/>
+            <param id="y"/>
+            <param id="label"/>
+            <param id="value"/>
+            <param id="phase"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442279" name="onUpdate" parent="NewWatch1View" startPc="268442061">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268442481" name="WatchFace" parent="Layouts" startPc="268442280">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
