@@ -1,0 +1,17 @@
+# Garmin Connect IQ generated files
+bin/
+gen/
+mir/
+internal-mir/
+
+# Build outputs
+*.prg
+*.prg.debug.xml
+*-settings.json
+
+# Export directory
+export/
+
+# IDE and local settings
+.vscode/
+.claude/settings.local.json
